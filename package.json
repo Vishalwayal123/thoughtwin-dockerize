@@ -1,0 +1,11 @@
+{
+  "name": "thoughtwin",
+  "private": true,
+  "dependencies": {
+    "@rails/webpacker": "4.3.0",
+    "activeadmin_quill_editor": "blocknotes/activeadmin_quill_editor"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^4.2.1"
+  }
+}

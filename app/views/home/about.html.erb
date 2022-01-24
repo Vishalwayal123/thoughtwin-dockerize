@@ -1,0 +1,149 @@
+<%= render "meta_body"%>
+<!-- meta tags -->
+<meta name="title" content="Hire the best web development company for your website" title="hire best remote developers">
+<link rel="canonical" href="https://thoughtwin.com/about/" />
+<app-header ></app-header>
+  <section class="our_team">
+    <div class="container-fluid">  
+        <div class="row bg-images11">
+            <div class="container">
+                <div class="concact_div">
+                    <h4>We are a community of friendly, open-minded,<br>
+                        collaborative and professionally growing people.</h4>
+                    <a href="/ourteam">
+                        <p>Meet our team<span><img src="../assets/img/ourteam.png" alt="Right"></span></p>
+                    </a>
+                </div>
+            </div>
+          <div class="container">
+            <div class="row">
+                 <div class="col-md-3 col-3 banner-div">
+                      <img src="../assets/img/mayur.png" alt="Mayur Khandelwal"> 
+                  </div>
+                  <div class="col-md-3 col-3 banner-div">
+                      <img src="../assets/img/s_psd.png" alt="Saurabh Jain"> 
+                  </div>
+                  <div class="col-md-3 col-3 banner-div">
+                      <img src="../assets/img/p_psd.png" alt="Pankaj Agrawal"> 
+                  </div>
+                  <div class="col-md-3 col-3 banner-div">
+                      <img src="../assets/img/a_psd.png" alt="Ashutosh Verma"> 
+                  </div>
+                </div>  
+            </div>
+        </div>
+      </div>
+  </section>
+  <section class="about_logo">
+    <div class="container">
+        <div class="row about_logo1">
+            <div class="col-md-6 col-6 icon-div1 about_border">
+                <h1><img src="../assets/img/about_icon1.png" alt="Business"></h1>
+                <span class="number">04</span><h1>YEARS IN<br>BUSINESS</h1>
+            </div>
+            <div class="col-md-6 col-6 icon-div1">
+                <h1><img src="../assets/img/about_icon2.png" alt="Members"></h1>
+                <span class="number">150+</span><h1>TEAM <br>MEMBERS</h1>
+            </div>
+        </div> 
+        <div class="row about_logo2">
+            <div class="col-md-4 col-6 icon-div2">
+                <img src="../assets/img/about_icon3.png" alt="HappyClient">
+                <h2>100+</h2>
+                <p>Happy <br>clients</p>
+            </div>
+            <div class="col-md-4 col-6 icon-div2">
+                <img src="../assets/img/about_icon4.png" alt="Project">
+                <h2>130+</h2>
+                <p>Successful <br>projects</p>
+            </div>
+            <div class="col-md-4 col-6 icon-div2 icon-div2mobilenone">
+                <img src="../assets/img/about_icon5.png" alt="Stories">
+                <h2>10K+</h2>
+                <p>Accepted <br>User Stories</p>
+            </div>
+        </div>
+    </div>
+  </section>
+  <section class="india-canada">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3 india_img">
+            <img src="../assets/img/india.png" alt="India">
+        </div>
+        <div class="col-md-6 contact-div">
+            <h1>India, Canada...</h1>
+            <p class="renowned-para">ThoughtWin is a renowned name in the website/mobile designing,<br>
+          development in Software industry but – WHY? It’s because we make web design<br>
+          and development that represents your business and spreads worldwide.<br>
+          The support, trust and over and over recommendations by the client<br>
+          is enough to describe the quality of work we offer.</p>
+          <span><img src="../assets/img/arrow.png" alt="arrow indication"></span><p class="contact_arrow">We define goals, analysis the requirements and make the project schedule.</p>
+          <span><img src="../assets/img/arrow.png" alt="arrow indication"></span><p class="contact_arrow">Depending on your objectives and goals, a sensible approach is taken whereby<br> solutions are developed to fit the needs of your organization.</p>
+          <span><img src="../assets/img/arrow.png" alt="arrow indication"></span><p class="contact_arrow">The company believes in offering high aim web solutions at affordable prices.</p>
+          <span><img src="../assets/img/arrow.png" alt="arrow indication"></span><p class="contact_arrow">The Achievement of Perfection is our goal, but Excellence is Guarantee.</p>
+          <span><img src="../assets/img/arrow.png" alt="arrow indication"></span><p class="contact_arrow">We don't just sell websites, we create websites that SELL.</p>
+          <span><img src="assets/img/arrow.png" alt="arrow indication"></span><p class="contact_arrow">We love what we do and we do what our clients love & work with great
+          clients all over the world to meet their purposes.</p>
+          <p class="successfully-div">We have successfully delivered a variety of websites like E-commerce websites(B2B+B2C),
+business directories, CMS websites, data-driven websites, blog websites, community website,
+Mobile applications etc. We currently have an in-house team of full-time resources with senior
+programmers, intermediate programmer, graphic designer, front end developer, a project
+manager and a business analyst. We are a team of incredibly talented senior-junior level engineers.
+What this means is that we will have continuous access to a wealth of resource and information. We support companies across the globe.</p>
+        </div>
+        <div class="col-md-3 canada_img">
+            <%= image_tag "img/canada.png", alt: "Canada"%>
+        </div>  
+      </div>  
+    </div>  
+  </section>
+</section>
+<script>
+  $(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+  });
+</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<style type="text/css">
+.concact_div a:hover{
+  text-decoration: none;
+}
+@media(max-width:768px){
+  .container {
+    max-width: 730px;
+}
+}
+@media(max-width:767px){
+span.number {
+  font-size: 40px;
+  display: block;
+  line-height: 50px;
+}
+.icon-div1 h1{
+  font-size: 18px;
+  padding-top: 10px;
+  line-height: 21px;
+}
+.contact-div h1{
+  text-align: center;
+    padding-top: 18px;
+}
+.canada_img img{
+  margin-bottom: 20px;
+}
+.successfully-div,.renowned-para{
+  text-align: center;
+ }
+}
+@media(max-width:414px){
+.about_logo1 {
+  margin-top: 0px;
+}
+}
+@media(max-width:375px){
+.about_logo1 {
+    margin-top: 30px;
+}
+}
+</style>

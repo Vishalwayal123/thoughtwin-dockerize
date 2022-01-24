@@ -1,0 +1,81 @@
+<section class="thankyou-bg">
+	<div class="container thankyou-container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="thanyou-img text-center">
+				<%= image_tag "message-icon.png" ,alt: "message provider"%>
+			</div>
+			<h2 class="text-center">Thanks for Submitting !</h2>
+			<p class="text-center">your message has been sent.</p>
+			<div class="text-center">
+				<%= link_to 'go home', root_path, class: "btn btn-home" %>
+			</div>
+		</div>
+	</div>
+</div>
+</section>
+<style type="text/css">
+	section.thankyou-bg{
+		background: #f5f5f5;
+	}
+	.thankyou-container{
+    padding: 190px 0px 75px 0px;
+	}
+	.btn-home{
+		text-transform: uppercase;
+	}
+	section.thankyou-bg h2{
+		color: #000;
+    padding-bottom: 25px;
+    font-size: 44px;
+    padding-top: 40px;
+	}
+	section.thankyou-bg p{
+		color: #000;
+    font-size: 23px;
+	}
+	a.btn-home{
+		text-decoration: none;
+		width: 16%;
+    border-radius: 50px;
+    margin-top: 30px;
+    color: #fff;
+    background-image: linear-gradient(to right, rgba(203, 31, 161, 3) 0%, rgba(53, 122, 215, 1) 100%) !important;
+    box-shadow: 0px 0px 20px 0px #eaeaea;
+	}
+  @media (max-width: 767px){
+    .thankyou-container{
+      padding: 125px 0px 40px 0px;
+      height: auto;
+    }
+    section.thankyou-bg{
+      overflow: hidden;
+    }
+    a.btn-home{
+      width: 75%;
+      padding: 15px;
+    }
+    section.thankyou-bg h2{
+      font-size: 28px;
+    }
+    section.thankyou-bg p{
+      font-size: 20px;
+    }
+  }
+  @media (min-width: 200px) and (max-width: 320px) {
+    section.thankyou-bg h2 {
+      font-size: 22px;
+    }
+    section.thankyou-bg p {
+      font-size: 17px;
+    }
+    a.btn-home {
+      width: 63%;
+      padding: 8px;
+      margin-top: 15px;
+    }
+    .thanyou-img img{
+      height: 45px;
+    }
+  }
+</style>

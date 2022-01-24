@@ -1,0 +1,24 @@
+<section class="porfolio_tab">
+  <div class="container-fluid">
+    <div class="row text-center">
+      <div class="col-md-4 nopadd portfolio_div">
+        <a href="/portfolios/ios_portfolio">
+          <h3 class=" border_both <% if params[:controller] == "portfolios" && params[:action] == "ios_portfolio"%>active_tab<%end%>">
+          IOT <span class="mob_portfolio">PORTFOLIO </span>
+        </h3></a>
+      </div>
+      <div class="col-md-4 nopadd portfolio_div">
+        <a href="/portfolios">
+          <h3 class=" border_both <% if params[:controller] == "portfolios" && params[:action] == "index"%>active_tab<%end%>">
+          WEB <span class="mob_portfolio">PORTFOLIO </span>
+        </h3></a>
+      </div>
+      <div class="col-md-4 nopadd portfolio_div">
+        <a href="/portfolios/mob_portfolio">
+          <h3 class=" border_both <% if params[:controller] == "portfolios" && params[:action] == "mob_portfolio"%>active_tab<%end%>">
+          MOBILE <span class="mob_portfolio">PORTFOLIO </span>
+        </h3></a>
+      </div>
+    </div>
+  </div>
+</section>

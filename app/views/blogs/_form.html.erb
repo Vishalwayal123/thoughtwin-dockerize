@@ -1,0 +1,138 @@
+<section class="blog-form pb-5 common-btndiv">
+  <div class="container">
+    <%= form_with(model: blog, local: true) do |form| %>
+      <% if blog.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(blog.errors.count, "error") %> prohibited this blog from being saved:</h2>
+
+          <ul>
+          <% blog.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <div class="field">
+              <%= form.label :title %>
+              <%= form.text_field :title , placeholder: "Title", class: "form-control"%>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="form-group">
+            <div class="field">
+              <%= form.label :description %>
+              <%= form.text_field :description , placeholder: "Title", class: "form-control"%>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="form-group">
+            <div class="field">
+              <%= form.label :name %>
+              <%= form.text_field :name , placeholder: "Title", class: "form-control"%>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="form-group">
+            <div class="field">
+              <%= form.label :subject %>
+              <%= form.text_field :subject ,placeholder: "Subject", class: "form-control" %>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="form-group">
+            <div class="field">
+              <%= form.label :question %>
+              <%= form.text_area :question , placeholder: "Question", class: "form-control"%>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="form-group">
+            <div class="field">
+              <%= form.label :answer %>
+              <%= form.text_area :answer , placeholder: "Answer", class: "form-control"%>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="form-group">
+            <div class="field">
+              <%= form.label :blogger %>
+              <%= form.text_field :blogger , placeholder: "Blogger", class: "form-control"%>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="form-group">
+            <div class="field">
+              <%= form.label :blogger_image %>
+              <%= form.file_field :blogger_image ,  class: "form-control"%>
+            </div>
+          </div>
+        </div>
+
+         <div class="col-md-6">
+          <div class="form-group">
+            <div class="field">
+              <%= form.label :blogger_department %>
+              <%= form.text_field :blogger_department , placeholder: "Blogger_department", class: "form-control"%>
+            </div>
+          </div>
+        </div>
+      </div>
+
+       <div class="actions btn submit-btn">
+        <%= form.submit%>
+      </div>
+    <% end %>
+  </div>
+</section>
+
+<!-- 6/10/20 -->
+<style type="text/css">
+   h1{
+    color: #000000!important;
+    font-weight: 600;
+    font-size: 40px;
+    padding: 10% 0 4% 0;
+  }
+  .blog-form .form-group input{
+    margin: 15px 0px 0px;
+  }
+  .common-btndiv .submit-btn input{
+    border-bottom: 0;
+    margin: 0;
+    padding: 0;
+    width:100%;
+    color: #fff;
+    font-weight: 500;
+  }
+  .common-btndiv .submit-btn{
+    width: 15%;
+    padding: 14px 0;
+    margin: 12px auto 0;
+
+  }
+  .blog-form textarea{
+    margin-top: 15px;
+  }
+   .blog-form .form-group input:focus{
+    border-color: #c1417d !important;
+  }
+</style>
+

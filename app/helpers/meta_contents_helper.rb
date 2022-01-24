@@ -1,0 +1,2 @@
+module MetaContentsHelper
+end

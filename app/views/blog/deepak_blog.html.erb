@@ -1,0 +1,1120 @@
+<app-header></app-header>
+<section class="container-fluid banner1">
+  <div class="banner_img"></div>
+  <div class="port_heading text-center">
+    <h2 class="thoughtwin_blog">What is Git ?</h2>
+    <h3>Deepak Yadav </h3>
+    <p><img class="blog_img" src="../../assets/img/deepakb.png" alt="Deepak yadav"></p>
+    <p>30 March, 2019 </p>
+  </div>
+</section>
+<section class="successful_product">
+  <div class="container">
+    <div class="row content_div">
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-12 text_div">
+            <h3><a routerLink="../blogcontacta">Save your whole day by knowing Basics of GIT,</a></h3>
+            <h6><b>30 November, 2018</b> by <span>Deepak</span> in <span>Technology</span></h6>
+            <p><b>What is Git ? </b></p>
+            <p>Git is a distributed version-control system for tracking changes in source code during software development. 
+              Go from zero to hero with Git source control step-by-step with easy to understand examples. Become the next Git expert. 
+              What makes senior developers senior is not that they know the syntax of a given language better, but that they have experience working with large and complex projects with real users and business goals. 
+              I’m not going much deeper in definition part, I’m at the beginning of my career, and I wanted to share some knowledge that I’ve acquired with you. So, get your coffee and let’s hack! 
+            </p>
+            <p><b>*</b> Check git is installed or not on your system, If the result is empty or if it says the command is not found, it means you have to install Git manually using https://git-scm.com/book/en/v2/Getting-Started-Installing-Git: 
+              $ which git </p>
+              <img src="../../../assets/img/which_git.png" alt="github">
+            <p><b>*</b> Unset global username & email (if you have Git already, it must not gloabally, because some time don't aware of this, and commits using globally set Name & Email) </p>
+                <ul>
+                  <li>$ git config --global --unset user.name </li>
+                  <li>$ git config --global --unset user.email </li>
+                </ul>
+                <img src="../../../assets/img/which_git.png" alt="github">
+            <p><b>*</b> Create New Project (whatever language you likes, because Git is not language specific), Then go to newly created folder</p>
+            <p><b>*</b> To initialize a repo into our project: </p>
+                    <ul>
+                      <li>$ git init </li>
+                    </ul>
+                    <img src="../../../assets/img/initialize_git.png" alt="initialize github">
+            <p> To set username & email for your current git repo. </p>
+                <ul>
+                  <li>$ git config user.name "Your Name" </li>
+                  <li>$ git config user.email "your.email@example.com" </li>
+                </ul>
+                <img src="../../../assets/img/set_name_n_email.png" alt="set name email">
+            <p><b>*</b> Create a new Repository on your desired website i.e. github.com, bitbucket.com and Set path of remote repository on our local Repository. </p>
+                <ul>
+                  <li>$ git remote add origin https://github.com/my_username/demo-pro.git</li>
+                </ul>
+                <p><b>*</b> Create new file which have to be added to the Git, newly added files are always Un-tracked, because the are not yet added to the Git </p>
+                <ul>
+                  <li>$ touch testing.html</li>
+                </ul>
+            <p><b>*</b> To check files which have to be added: </p>
+                <ul>
+                  <li>$ git status </li>
+                </ul>
+                <img src="../../../assets/img/git_status.png" alt="git status">
+                <img src="../../../assets/img/git_status_sequence.png" alt="git sequence">
+            <p><b>*</b> To Add specific files to git </p>
+                <ul>
+                  <li>$ git add testing.html </li>
+                  <li>$ git status </li>
+                </ul>
+                <img src="../../../assets/img/add_file.png" alt="add file">
+            <p><b>*</b> To check diff between original file and changed file (same file): </p>
+                <ul>
+                  <li>$ git status </li>
+                  <li>$ git diff testing.html </li>
+                  <li>$ git add testing.html </li>
+                </ul>
+                <img src="../../../assets/img/check_diff.png" alt="check difference">
+            <p><b>*</b> To add all files, contains modified files as well as un-tracked files. </p>
+                <ul>
+                  <li>$ git add . </li>
+                  <li>$ git add -A </li>
+                </ul>
+            <p><b>*</b> Commit changes, Now you will see no files, which have to add and commit, just a clean tree </p>
+                <ul>
+                  <li>$ git commit -m "Initial commit." </li>
+                </ul>
+                <img src="../../../assets/img/initial_commit.png" alt="initialize commit">
+            <p><b>*</b> After making your first commit then only your "master" will appear, master is the default branch for Git, you can check all branches using </p>
+                <ul>
+                  <li>$ git branch </li>
+                </ul>
+                <img src="../../../assets/img/git_branch.png" alt="git branch">
+            <p><b>*</b> To check last commits detail </p>
+                <ul>
+                  <li>$ git log </li>
+                </ul>
+                <img src="../../../assets/img/commit_log.png" alt="commit log">
+            <p><b>*</b> To check commit details </p>
+                <ul>
+                  <li>$ git log </li>
+                </ul>
+                <img src="../../../assets/img/commit_log.png" alt="commit log">
+            <p><b>*</b> To check commit details by gitk </p>
+                <ul>
+                  <li>$ gitk</li>
+                </ul>
+            <p><b>*</b> The commit is identified by a hash i.e. 879392a6bd8dd507f21856869de99d73f40299cc, The hash is often referred to as a “SHA” (pronounced shah)</p>
+            <p><b>*</b> To commit all changed files without adding them (un-tracked files will not be affected.) </p>
+                <ul>
+                  <li>$ git commit -am "Commit all tracked files message." </li>
+                  <li>$ git commit -a -m "Commit all tracked files message." </li>
+                </ul>
+                <img src="../../../assets/img/commit_all_tracked_files.png" alt="all tracked files">
+            <p><b>*</b> To create new branch using current branch, so all current branch code will be present on newly created branch. </p>
+                <ul>
+                  <li>$ git checkout -b dummy_branch </li>
+                </ul>
+                <img src="../../../assets/img/new_branch.png" alt="new branch">
+            <p><b>*</b> Commit any new file OR any change on dummy_branch branch </p>
+                <ul>
+                  <li>$ git status </li>
+                  <li>$ git add testing1.html  </li>
+                  <li>$ git commit -m "testing1 branch's first commit." </li>
+                  <li>$ git status </li>
+                </ul>
+                <img src="../../../assets/img/commit_on_dummy_branch.png" alt="dummy branch">
+            <p><b>*</b> To move from current branch to another branch (dummy_branch to master) </p>
+                <ul>
+                  <li>$ git checkout master </li>
+                </ul>
+                <img src="../../../assets/img/change_branch.png" alt="change branch">
+            <p><b>*</b> Now master branch will not have code commited on the dummy_branch, so we have merge that. </p>
+                <ul>
+                  <li>$ git merge dummy_branch </li>
+                </ul>
+                <img src="../../../assets/img/merge_branch.png" alt="merge branch">
+            <p><b>*</b> To push master branch to remote repo(github or bitbucket) </p>
+                <ul>
+                  <li>$ git push origin master </li>
+                </ul>
+                <img src="../../../assets/img/push_master.png" alt="push master">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- Testomonial -->
+<section class="testimonial-section2 container pad_tb_35">
+  <div class="row text-center">
+  </div>
+  <div id="testim" class="testim">
+    <div class="wrap">
+      <span id="right-arrow" class="arrow right"><img src="assets/img/right-arrow.png" alt="right arrow"></span>
+      <span id="left-arrow" class="arrow left"><img src="assets/img/left-arrow.png" alt="right arrow"></span>
+      <ul id="testim-dots" class="dots">
+        <li class="dot"></li>
+        <li class="dot"></li>
+      </ul>
+      <div id="testim-content" class="cont">
+        <div>
+          <div class="img"><img src="assets/img/testmonial1.jpg" alt="testimonials content"></div>
+          <div class="h4">David</div>
+          <p>They have special talent for transforming complex information into useful things, by focusing on exactly
+            what your target audience is looking for.</p>
+        </div>
+        <div>
+          <div class="img"><img src="assets/img/testmonial2.jpg" alt="testimonials content"></div>
+          <div class="h4">Alumni</div>
+          <p>If you are clear of what you want – then they can deliver killer copy in one attempt. I recommend their
+            development services.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="css/script.js"></script>
+<script>
+  $(document).ready(function () {
+    $('[data-toggle="tooltip"]').tooltip();
+  });
+</script>
+<style type="text/css">
+.top_menu {
+    background: inherit !important;
+    z-index: 999;
+    margin: 0px !important;
+    padding: 0 150px !important;
+    max-width: 100%;
+}
+.menu_bg {
+    max-width: 400px;
+}
+.per_logo_img {
+    width: 50%;
+}
+/* testimonials */
+.testimonial-section2 {
+    position: relative;
+    padding: 0;
+}
+.testim .wrap {
+    position: relative;
+    width: 100%;
+    max-width: 1020px;
+    padding: 40px 20px;
+    margin: auto;
+}
+.testim .arrow {
+    display: block;
+    position: absolute;
+    color: #000;
+    cursor: pointer;
+    font-size: 2em;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    padding: 5px;
+    z-index: 999;
+}
+.testim .arrow:before {
+    cursor: pointer;
+}
+.testim .arrow:hover {
+    color: #666;
+}
+.testim .arrow.left {
+    left: 10px;
+}
+.testim .arrow.right {
+    right: 10px;
+}
+.testim .dots {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    bottom: 60px;
+    left: 0;
+    display: block;
+    z-index: 3333;
+    height: 12px;
+}
+.testim .dots .dot {
+    list-style-type: none;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    margin: 0 10px;
+    cursor: pointer;
+    -webkit-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    position: relative;
+}
+.testim .dots .dot.active,
+.testim .dots .dot:hover {
+    background: #000;
+    border-color: #000;
+}
+.testim .dots .dot.active {
+    -webkit-animation: testim-scale .5s ease-in-out forwards;
+    -moz-animation: testim-scale .5s ease-in-out forwards;
+    -ms-animation: testim-scale .5s ease-in-out forwards;
+    -o-animation: testim-scale .5s ease-in-out forwards;
+    animation: testim-scale .5s ease-in-out forwards;
+}
+.testim .cont {
+    position: relative;
+    overflow: hidden;
+}
+.testim .cont>div {
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 0 70px 0;
+    opacity: 0;
+    right: 0;
+}
+.testim .cont>div.inactive {
+    opacity: 1;
+}
+.testim .cont>div.active {
+    position: relative;
+    opacity: 1;
+}
+.testim .cont div .img img {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    border-radius: 50%;
+}
+.testim .cont div .h4 {
+    color: #666;
+    font-size: 1.2em;
+    margin: 15px 0;
+}
+.testim .cont div p {
+    font-size: 1.15em;
+    color: #000;
+    width: 80%;
+    margin: auto;
+}
+.testim .cont div.active .img img {
+    -webkit-animation: testim-show .5s ease-in-out forwards;
+    -moz-animation: testim-show .5s ease-in-out forwards;
+    -ms-animation: testim-show .5s ease-in-out forwards;
+    -o-animation: testim-show .5s ease-in-out forwards;
+    animation: testim-show .5s ease-in-out forwards;
+}
+.testim .cont div.active .h4 {
+    -webkit-animation: testim-content-in .4s ease-in-out forwards;
+    -moz-animation: testim-content-in .4s ease-in-out forwards;
+    -ms-animation: testim-content-in .4s ease-in-out forwards;
+    -o-animation: testim-content-in .4s ease-in-out forwards;
+    animation: testim-content-in .4s ease-in-out forwards;
+}
+.testim .cont div.active p {
+    -webkit-animation: testim-content-in .5s ease-in-out forwards;
+    -moz-animation: testim-content-in .5s ease-in-out forwards;
+    -ms-animation: testim-content-in .5s ease-in-out forwards;
+    -o-animation: testim-content-in .5s ease-in-out forwards;
+    animation: testim-content-in .5s ease-in-out forwards;
+}
+.testim .cont div.inactive .img img {
+    -webkit-animation: testim-hide .5s ease-in-out forwards;
+    -moz-animation: testim-hide .5s ease-in-out forwards;
+    -ms-animation: testim-hide .5s ease-in-out forwards;
+    -o-animation: testim-hide .5s ease-in-out forwards;
+    animation: testim-hide .5s ease-in-out forwards;
+}
+.testim .cont div.inactive .h4 {
+    -webkit-animation: testim-content-out .4s ease-in-out forwards;
+    -moz-animation: testim-content-out .4s ease-in-out forwards;
+    -ms-animation: testim-content-out .4s ease-in-out forwards;
+    -o-animation: testim-content-out .4s ease-in-out forwards;
+    animation: testim-content-out .4s ease-in-out forwards;
+}
+.testim .cont div.inactive p {
+    -webkit-animation: testim-content-out .5s ease-in-out forwards;
+    -moz-animation: testim-content-out .5s ease-in-out forwards;
+    -ms-animation: testim-content-out .5s ease-in-out forwards;
+    -o-animation: testim-content-out .5s ease-in-out forwards;
+    animation: testim-content-out .5s ease-in-out forwards;
+}
+.text_div ul {
+    list-style-type: none;
+    margin-bottom: 20px;
+}
+.text_div img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+@-webkit-keyframes testim-scale {
+    0% {
+        -webkit-box-shadow: 0px 0px 0px 0px #000;
+        box-shadow: 0px 0px 0px 0px #000;
+    }
+
+    35% {
+        -webkit-box-shadow: 0px 0px 10px 5px #000;
+        box-shadow: 0px 0px 10px 5px #000;
+    }
+
+    70% {
+        -webkit-box-shadow: 0px 0px 10px 5px #ea830e;
+        box-shadow: 0px 0px 10px 5px #ea830e;
+    }
+
+    100% {
+        -webkit-box-shadow: 0px 0px 0px 0px #ea830e;
+        box-shadow: 0px 0px 0px 0px #ea830e;
+    }
+}
+@-moz-keyframes testim-scale {
+    0% {
+        -moz-box-shadow: 0px 0px 0px 0px #000;
+        box-shadow: 0px 0px 0px 0px #000;
+    }
+
+    35% {
+        -moz-box-shadow: 0px 0px 10px 5px #000;
+        box-shadow: 0px 0px 10px 5px #000;
+    }
+
+    70% {
+        -moz-box-shadow: 0px 0px 10px 5px #ea830e;
+        box-shadow: 0px 0px 10px 5px #ea830e;
+    }
+
+    100% {
+        -moz-box-shadow: 0px 0px 0px 0px #ea830e;
+        box-shadow: 0px 0px 0px 0px #ea830e;
+    }
+}
+@-ms-keyframes testim-scale {
+    0% {
+        -ms-box-shadow: 0px 0px 0px 0px #000;
+        box-shadow: 0px 0px 0px 0px #000;
+    }
+
+    35% {
+        -ms-box-shadow: 0px 0px 10px 5px #000;
+        box-shadow: 0px 0px 10px 5px #000;
+    }
+
+    70% {
+        -ms-box-shadow: 0px 0px 10px 5px #ea830e;
+        box-shadow: 0px 0px 10px 5px #ea830e;
+    }
+
+    100% {
+        -ms-box-shadow: 0px 0px 0px 0px #ea830e;
+        box-shadow: 0px 0px 0px 0px #ea830e;
+    }
+}
+@-o-keyframes testim-scale {
+    0% {
+        -o-box-shadow: 0px 0px 0px 0px #000;
+        box-shadow: 0px 0px 0px 0px #000;
+    }
+
+    35% {
+        -o-box-shadow: 0px 0px 10px 5px #000;
+        box-shadow: 0px 0px 10px 5px #000;
+    }
+
+    70% {
+        -o-box-shadow: 0px 0px 10px 5px #ea830e;
+        box-shadow: 0px 0px 10px 5px #ea830e;
+    }
+
+    100% {
+        -o-box-shadow: 0px 0px 0px 0px #ea830e;
+        box-shadow: 0px 0px 0px 0px #ea830e;
+    }
+}
+@keyframes testim-scale {
+    0% {
+        box-shadow: 0px 0px 0px 0px #000;
+    }
+
+    35% {
+        box-shadow: 0px 0px 10px 5px #000;
+    }
+
+    70% {
+        box-shadow: 0px 0px 10px 5px #ea830e;
+    }
+
+    100% {
+        box-shadow: 0px 0px 0px 0px #ea830e;
+    }
+}
+@-webkit-keyframes testim-content-in {
+    from {
+        opacity: 0;
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+@-moz-keyframes testim-content-in {
+    from {
+        opacity: 0;
+        -moz-transform: translateY(100%);
+        transform: translateY(100%);
+    }
+
+    to {
+        opacity: 1;
+        -moz-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+@-ms-keyframes testim-content-in {
+    from {
+        opacity: 0;
+        -ms-transform: translateY(100%);
+        transform: translateY(100%);
+    }
+
+    to {
+        opacity: 1;
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+@-o-keyframes testim-content-in {
+    from {
+        opacity: 0;
+        -o-transform: translateY(100%);
+        transform: translateY(100%);
+    }
+
+    to {
+        opacity: 1;
+        -o-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+@keyframes testim-content-in {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@-webkit-keyframes testim-content-out {
+    from {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
+    }
+}
+@-moz-keyframes testim-content-out {
+    from {
+        opacity: 1;
+        -moz-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        -moz-transform: translateY(-100%);
+        transform: translateY(-100%);
+    }
+}
+@-ms-keyframes testim-content-out {
+    from {
+        opacity: 1;
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        -ms-transform: translateY(-100%);
+        transform: translateY(-100%);
+    }
+}
+@-o-keyframes testim-content-out {
+    from {
+        opacity: 1;
+        -o-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-100%);
+        transform: translateY(-100%);
+    }
+}
+@keyframes testim-content-out {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+}
+@-webkit-keyframes testim-show {
+    from {
+        opacity: 0;
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+@-moz-keyframes testim-show {
+    from {
+        opacity: 0;
+        -moz-transform: scale(0);
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        -moz-transform: scale(1);
+        transform: scale(1);
+    }
+}
+@-ms-keyframes testim-show {
+    from {
+        opacity: 0;
+        -ms-transform: scale(0);
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        -ms-transform: scale(1);
+        transform: scale(1);
+    }
+}
+@-o-keyframes testim-show {
+    from {
+        opacity: 0;
+        -o-transform: scale(0);
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        -o-transform: scale(1);
+        transform: scale(1);
+    }
+}
+@keyframes testim-show {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@-webkit-keyframes testim-hide {
+    from {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 0;
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+}
+@-moz-keyframes testim-hide {
+    from {
+        opacity: 1;
+        -moz-transform: scale(1);
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 0;
+        -moz-transform: scale(0);
+        transform: scale(0);
+    }
+}
+@-ms-keyframes testim-hide {
+    from {
+        opacity: 1;
+        -ms-transform: scale(1);
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 0;
+        -ms-transform: scale(0);
+        transform: scale(0);
+    }
+}
+@-o-keyframes testim-hide {
+    from {
+        opacity: 1;
+        -o-transform: scale(1);
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 0;
+        -o-transform: scale(0);
+        transform: scale(0);
+    }
+}
+@keyframes testim-hide {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+.menu_banner {
+    background-image: url('../../assets/img/menu_banner.jpg');
+    background-repeat: no-repeat;
+    background-position: top;
+    padding-top: 20px;
+}
+.menu__list .menu__link {
+    text-transform: uppercase;
+}
+.per_tim {
+    top: 45%;
+}
+.cube {
+    width: 130px;
+    height: 44px;
+    border-left: 3px solid #ef6f3b;
+    border-right: 3px solid #d742a0;
+    border-top: 3px solid #ef6f3b;
+    border-bottom: 3px solid #d742a0;
+    border-radius: 6px;
+    box-sizing: border-box;
+    background-position: 0 0, 0 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 4px;
+    background: linear-gradient(to right, #ef6f3b, #d742a0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    line-height: 26px;
+    text-align: center;
+}
+.DropPadd20px {
+    padding-bottom: 20px;
+}
+.DropPadd20px form input {
+    padding: 0px;
+    margin: 0px;
+}
+.menu_banner {
+    background-image: url('../../assets/img/menu_banner.jpg');
+    background-repeat: no-repeat;
+    background-position: top;
+    padding-top: 20px;
+}
+.menu__list .menu__link {
+    text-transform: uppercase;
+}
+.menu_banner {
+    background-image: url('../../assets/img/menu_banner.jpg');
+    background-repeat: no-repeat;
+    background-position: top;
+}
+.menu__list .menu__link {
+    text-transform: uppercase;
+}
+.menu_banner.menu_banner {
+    background-size: cover !important;
+}
+.submit-btn {
+    cursor: pointer;
+}
+.mob_width_50 img {
+    padding-bottom: 20px;
+}
+.text_div h3 {
+    color: #222;
+    font-weight: 700;
+    font-size: 19px;
+    background: -webkit-linear-gradient(#e56a39, #af3386);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.content_div {
+    margin: 50px 0;
+}
+.text_div h6 {
+    color: #222;
+}
+.text_div span {
+    color: #0cabed;
+}
+.image_div img {
+        width: 100% !important;
+        height: 300px;
+        margin: 0 0 20px 0 !important;
+        object-fit: cover;
+}
+.text_div p {
+    color: #222;
+}
+.search_div h2 {
+    color: #222;
+    font-weight: 700;
+}
+.Categories_list {
+    list-style: none;
+    color: #0cabed;
+    margin: 6px;
+    padding: 0;
+}
+.Categories_list li {
+    font-size: 18px;
+    margin: 3px 0;
+}
+.icon_list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+.icon_list li {
+    display: inline-block;
+}
+.search_div i.fa.fa-facebook {
+    background: #2160d3;
+    padding: 9px 14px;
+    border-radius: 50px;
+    font-size: 20px;
+    color: #fff;
+    margin: 0 4px;
+}
+.search_div i.fa.fa-twitter {
+    background: #05b1f8;
+    padding: 9px 10px;
+    border-radius: 50px;
+    font-size: 20px;
+    color: #fff;
+    margin: 0 4px;
+}
+.search_div i.fa.fa-linkedin {
+    background: #007bb5;
+    padding: 9px 10px;
+    border-radius: 50px;
+    font-size: 20px;
+    color: #fff;
+    margin: 0 4px;
+}
+.search_div i.fa.fa-rss {
+    background: red;
+    padding: 9px 10px;
+    border-radius: 50px;
+    font-size: 20px;
+    color: #fff;
+    margin: 0 4px;
+}
+.search_div i.fa.fa-rss {
+    background: #ff6c00;
+    padding: 9px 12px;
+    border-radius: 50px;
+    font-size: 20px;
+}
+.search_div input[type="search"] {
+    border: 2px solid #05b1f8;
+    border-radius: 50px;
+    padding: 10px;
+    outline: none;
+    position: relative;
+    width: 80%;
+}
+.search_div i.fa.fa-search {
+    position: absolute;
+    top: 13px;
+    font-size: 22px;
+    color: #05b1f8;
+    left: 30px;
+}
+.image_content {
+    margin: 30px 0;
+}
+.port_heading {
+    text-align: center;
+}
+.thoughtwin_blog {
+    text-align: center !important;
+}
+.text-center h2 {
+    font-size: 50px;
+    font-weight: 800;
+    margin-bottom: 50px;
+}
+.image_div img {
+    width: 150px;
+    margin: 20px 0;
+}
+.banner1 {
+    height: 550px;
+    margin-top: -94px;
+    background: linear-gradient(to right, rgba(239, 110, 59, 1) 0, rgba(213, 63, 168, 1) 100%);
+}
+.blog_images {
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    margin: 10px 5px 0 5px;
+}
+.text-center h5 {
+    margin-top: 30px;
+}
+.port_heading.text-center {
+    margin-top: 100px;
+}
+.text-center h5 {
+    margin-top: -40px !important;
+    margin-left: 130px !important;
+}
+img.map2 {
+    width: 100% !important;
+}
+.banner_img {
+    background-image: url('../../assets/img/rajbada.png');
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 39%;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+.text-center h3 {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.port_heading p {
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+}
+.blog_img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+}
+.testimonial-section2{
+    display: none !important;
+}
+.text_div ul {
+    margin: 0;
+    padding: 0;
+     margin-bottom: 50px
+}
+.text_div ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 0 10px;
+   
+}
+.blog_name{
+    padding-left: 70px;
+}
+@media(max-width:768px) {
+    .top_menu {
+        padding: 0 50px !important;
+    }
+    .port_height {
+        width: 70%;
+    }
+    .text-center h2 {
+        font-size: 45px;
+    }
+}
+@media(max-width:767px) {
+    .top_menu {
+        padding: 0 30px !important;
+    }
+    .banner1 {
+        margin-top: -100px !important;
+        height: 450px !important;
+    }
+    .port_height {
+        width: 60%;
+    }
+    .mob_width_50 img {
+        margin-top: 30px;
+    }
+    .port_heading.text-center {
+        margin-top: 150px !important;
+    }
+    .talk-div {
+        margin-top: 25px;
+    }
+    .burger {
+        top: 30px;
+    }
+    .text-center h2 {
+        font-size: 30px !important;
+        margin-bottom: 20px;
+    }
+    .text-center span {
+        font-size: 20px !important;
+    }
+    .col-sm-3.search_div {
+        text-align: center
+    }
+    .search_div i.fa.fa-search {
+        left: 49px !important;
+    }
+    .container {
+        max-width: 780px;
+    }
+    .search_div h2 {
+        display: none;
+    }
+    .Categories_list li {
+        display: inline-block;
+        padding: 0 25px !important;
+    }
+    .search_div input[type="search"] {
+        width: 100% !important;
+    }
+    .icon_list {
+        text-align: center;
+    }
+    .content_div .col-md-9.col-12 {
+        text-align: center;
+    }
+    .col-md-9.col-sm-9.text_div {
+        text-align: left;
+    }
+    .banner_img {
+        widows: 70%;
+    }
+    header {
+        height: 13vh !important;
+    }
+}
+@media(max-width:414px) {
+    .top_menu {
+        padding: 0 15px !important;
+    }
+    .col-md-3.image_div {
+        text-align: center !important;
+    }
+    .search_div i.fa.fa-search {
+        left: 40px !important;
+    }
+    .mob_width_50 img {
+        margin-top: 16px;
+    }
+    .talk-div {
+        margin-top: 15px;
+    }
+    .Categories_list {
+        text-align: center;
+    }
+    .Categories_list li {
+        padding: 0 10px !important;
+    }
+    .port_heading h2 {
+        font-size: 24px !important;
+    }
+    .port_heading span {
+        font-size: 17px !important;
+    }
+    .text_div h3 {
+        margin-top: 10px;
+    }
+    .port_height {
+        width: 100%;
+    }
+    .content_div {
+        margin: 20px 0;
+    }
+    .image_div img {
+        height: auto;
+    }
+    .banner_img {
+        display: none;
+    }
+    .mob_width_50 img {
+        margin-top: 20px;
+    }
+}
+@media(max-width: 375px) {
+    .talk-div,
+    .mob_width_50 {
+        top: 0px !important;
+    }
+    header {
+        height: 10vh !important;
+    }
+    .port_heading h2 {
+        font-size: 22px !important;
+    }
+    .port_heading span {
+        font-size: 14px !important;
+    }
+    .mob_width_50 img {
+        margin-top: 12px;
+    }
+    .talk-div {
+        margin-top: 10px;
+    }
+    .burger {
+        top: 20px;
+    }
+}
+@media(max-width: 360px) {
+    .talk-div span {
+        padding: 5px 3px !important;
+    }
+}
+@media(min-width: 415px) and (max-width: 767px) {
+    .container-fluid.banner1 .port_heading{
+        top:16% !important;
+    }
+}
+</style>

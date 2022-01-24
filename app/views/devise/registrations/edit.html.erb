@@ -1,0 +1,443 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12 p-0">
+			<h1></h1>
+			<div class="position-absoluteimg">
+				<img alt="Thoughtwin" class="img-responsive first_logo" src="/assets/img/header.png">
+				<div class="dropdown">
+					<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					 <!--  <i class="fa fa-bars"></i> -->
+					 <img alt="Thoughtwin" class="" src="/assets/img/menu.png">
+				 </button>
+				 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+					<a class="dropdown-item" href="#">
+						<%= link_to '<button type="EDIT" class="btn sidebar-button">user update details</button>'.html_safe,  edit_user_registration_path %>
+					</a>
+					<a class="dropdown-item" href="#">
+						<%= link_to "Logout",  destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-12 p-0">
+		<div class="row">
+			<div class="col-lg-2 col-md-3" style="border: 2px solid #c3c3c3;    background-color: #efefef;">
+				<div class="sidenav-buttons">
+					<ul>
+						<li>
+							<%= link_to '<button type="PERSONAL DETAIL" class="btn sidebar-button">dashboard</button>'.html_safe, dashboard_path %>
+						</li>
+						<li><%= link_to '<button type="guideline" class="btn sidebar-button"> Help center</button>'.html_safe,  guideline_path %></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-lg-10 col-md-9 no-pad">
+				<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+				<%= render "devise/shared/error_messages", resource: resource %>
+				<div class="right-contantbox">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<h1 class="personal-detailhead">Personal Details</h1>
+							</div>
+							<div class="col-lg-6 col-sm-12 profile-imgearea">
+								<div id="profile_image" class="field">
+									<%= f.label :profile_image %><br>
+									<%= f.file_field  :profile_image %>
+								</div>
+								<div id="target2"></div>
+							</div>  
+							<div class="col-lg-6 col-sm-12">
+								<div class="field">
+									<%= f.label :username %><br />
+									<%= f.text_field :username, autofocus: true, autocomplete: "email" %>
+								</div>
+							</div>
+							<div class="col-lg-6 col-sm-12">
+								<div class="field">
+									<%= f.label :first_name %><br />
+									<%= f.text_field :first_name, autofocus: true, autocomplete: "email" %>
+								</div>
+							</div>
+							<div class="col-lg-6 col-sm-12">
+								<div class="field">
+									<%= f.label :last_name %><br />
+									<%= f.text_field :last_name, autofocus: true, autocomplete: "email" %>
+								</div>
+							</div>
+							<div class="col-lg-6 col-sm-12">
+								<div class="field">
+									<%= f.label :email %><br />
+									<%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+								</div>
+							</div>
+							<div class="col-lg-6 col-sm-12">
+								<div class="field">
+									<%= f.label :address %><br />
+									<%= f.text_field :address %>
+								</div>
+							</div>
+							<div class="col-lg-6 col-sm-12">
+								<div class="field">
+									<%= f.label :doj %><br />
+									<%= f.date_field :doj %>
+								</div>
+							</div>
+							<div class="col-lg-6 col-sm-12">
+								<div class="field">
+									<%= f.label :date_of_birth %><br />
+									<%= f.date_field :date_of_birth %>
+								</div>
+							</div>
+							<div class="col-lg-6 col-sm-12">
+								<div class="field">
+									<%= f.label :gender %><br />
+									<%= f.text_field :gender %>
+								</div>
+							</div>
+							<div class="col-lg-6 col-sm-12">
+								<div class="field">
+									<%= f.label :contact_number %><br />
+									<%= f.number_field :contact_number %>
+								</div>
+							</div>
+							<div class="col-lg-6 col-sm-12">
+								<div class="field">
+									<%= f.label :martial_status %><br />
+									<%= f.text_field :martial_status %>
+								</div>
+							</div>
+							<div class="col-lg-6 col-sm-12">
+								<div class="field">
+									<%= f.label :father_name %><br />
+									<%= f.text_field :father_name %>
+								</div>
+							</div>
+							<div class="col-lg-6 col-sm-12">
+								<div class="field">
+									<%= f.label :father_contact %><br />
+									<%= f.number_field :father_contact %>
+								</div>
+							</div>
+							<div class="col-lg-6 col-sm-12">
+								<div class="field">
+									<%= f.label :mother_name %><br />
+									<%= f.text_field :mother_name %>
+								</div>
+							</div>
+							<div class="col-lg-6 col-sm-12">
+								<div class="field">
+									<%= f.label :mother_contact %><br />
+									<%= f.number_field :mother_contact %>
+								</div>
+							</div>
+							<div class="col-lg-6 col-sm-12">
+								<div class="field">
+									<%= f.label :present_address %><br />
+									<%= f.text_field :present_address %>
+								</div>
+							</div>
+							<div class="col-lg-6 col-sm-12">
+								<div class="field">
+									<%= f.label :permanent_address %><br />
+									<%= f.text_field :permanent_address %>
+								</div>
+							</div>
+							<div class="col-lg-6 col-sm-12">
+								<div class="field">
+									<%= f.label :email_primary %><br />
+									<%= f.text_field :email_primary %>
+								</div>
+							</div>
+							<div class="col-lg-6 col-sm-12">
+								<div class="field">
+									<%= f.label :blood_group %><br />
+									<%= f.text_field :blood_group %>
+								</div>
+							</div>
+							<div class="col-lg-6 col-sm-12">
+								<div class="field">
+									<%= f.label :religion %><br />
+									<%= f.text_field :religion %>
+								</div>
+							</div>
+							<div class="col-lg-6 col-sm-12">
+								<div class="field">
+									<%= f.label :language_known %><br />
+									<%= f.text_field :language_known %>
+								</div>
+							</div>
+							<div class="col-lg-6 col-sm-12">
+								<div class="field">
+									<%= f.label :if_yes_spouse_contact_number %><br />
+									<%= f.number_field :if_yes_spouse_contact_number %>
+								</div>
+							</div>
+							<% current_user.build_account_detail if current_user.account_detail.nil? %>
+							<%= f.fields_for :account_detail do |f| %>
+							<div class="col-md-12">
+								<h1 class="personal-detailhead">Account Details</h1>
+							</div>
+							<div class="col-lg-6 col-sm-12">
+								<div class="field">
+									<%= f.label :account_number %><br>
+									<%= f.number_field :account_number %>
+								</div>
+							</div>
+							<div class="col-lg-6 col-sm-12">
+								<div class="field">
+									<%= f.label :ifsc_code %><br>
+									<%= f.text_field :ifsc_code %>
+								</div>
+							</div>
+							<div class="col-lg-6 col-sm-12">
+								<div class="field">
+									<%= f.label :branch_address %><br>
+									<%= f.text_field :branch_address %>
+								</div>
+							</div>
+							<div class="col-lg-6 col-sm-12"></div>
+							<div class="col-md-12">
+								<h1 class="personal-detailhead">ID Proof</h1>
+							</div>
+							<div class="col-lg-6 col-sm-12">
+								<div class="field">
+									<%= f.label :pan_number %><br>
+									<%= f.text_field :pan_number %>
+								</div>
+							</div>
+							<div class="col-lg-6 col-sm-12">
+								<div class="field">
+									<%= f.label :aadhar_number %><br>
+									<%= f.number_field :aadhar_number %>
+								</div>
+							</div>
+							<div class="col-lg-6 col-sm-12">
+								<div id="pan_card" class="field">
+									<%= f.label :pan_card %><br>
+									<%= f.file_field :pan_card %>
+								</div>
+								<div class="setimg">
+									<canvas class="page" size="A4" layout="landscape"></canvas>
+									<div id="target"></div>
+								</div>
+							</div>
+							<div class="col-lg-6 col-sm-12">
+								<div id="aadhar_card" class="field">
+									<%= f.label :aadhar_card %><br>
+									<%= f.file_field  :aadhar_card %>
+								</div>
+								<div class="setimg">
+								 <canvas id="tar" class="page" size="A4" layout="landscape"></canvas>
+								 <div id="target1"></div>
+							 </div>
+						 </div>
+						 <%end%>
+						 <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+						 <div>
+							Currently waiting confirmation for: <%= resource.unconfirmed_email %>
+						</div>
+						<% end %>
+						<div class="col-md-12">
+							<h1 class="personal-detailhead">Change Password</h1>
+						</div>
+						<div class="col-lg-6 col-sm-12">
+							<div class="field">
+								<%= f.label :password %><br>
+								<%= f.password_field :password, autocomplete: "new-password" %>
+								<% if @minimum_password_length %>
+								<br />
+								<em><%= @minimum_password_length %> characters minimum</em>
+								<% end %>
+							</div>
+						</div>
+						<div class="col-lg-6 col-sm-12">
+							<div class="field">
+								<%= f.label :password_confirmation %><br>
+								<%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+							</div>
+						</div>
+						<div class="col-lg-6 col-sm-12">
+							<div class="field">
+								<%= f.label :current_password %><br>
+								<%= f.password_field :current_password, autocomplete: "current-password" %>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="actions btnset">
+								<%= f.submit "Update" %>
+							</div>
+						</div>
+					</div>
+				</div>
+				<footer class="ftr_des">
+					<div class="container">
+					 <div class="row ">
+						 <div class="col-lg-5"><img alt="Thoughtwin" class="img-responsive first_logo" src="/assets/img/header.png"></div>
+						 <div class="col-lg-4">
+							<h2>Contact</h2>
+							<p>India: +91 9977069348</p>
+						</div>
+						<div class="col-lg-3">
+							<h2>Follow Us</h2>
+							<div class="social-box">
+								<ul class=" social-list">
+									<li>
+										<a href="https://www.facebook.com/thoughtwin/" target="_blank"> 
+											<i class="fa fa-facebook face_margin" aria-hidden="true" title="Facebook"></i> 
+										</a>
+									</li>
+									<li>
+									 <a href="https://www.twitter.com/thoughtwin/" target="_blank"> 
+										<i class="fa fa-twitter face_margin" aria-hidden="true" title="Twitter"></i> 
+									</a>
+								</li>
+								<li>
+									<a href="https://in.linkedin.com/company/thoughtwin" target="_blank">
+										<i class="fa fa-linkedin face_margin" aria-hidden="true" title="LinkedIn"></i> 
+									</a>
+								</li>
+								<li>
+									<a href="https://www.instagram.com/thoughtwin_solutions/" target="_blank"> 
+										<i class="fa fa-instagram face_margin" aria-hidden="true" title="Instagram"></i> 
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div> 
+				</footer> 
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/pdf.js/1.8.349/pdf.min.js"></script>   
+<script type="text/javascript">
+	document.querySelector("#pan_card").addEventListener("change", function(e) {
+		var canvasElement = document.querySelector("canvas")
+		var file = e.target.files[0]
+		if (file.type == "application/pdf") {
+			var fileReader = new FileReader();
+			fileReader.onload = function() {
+				var typedarray = new Uint8Array(this.result);
+				PDFJS.getDocument(typedarray).then(function(pdf) {
+				// you can now use *pdf* here
+				console.log("the pdf has ", pdf.numPages, "page(s).")
+				pdf.getPage(pdf.numPages).then(function(page) {
+					// you can now use *page* here
+					var viewport = page.getViewport(2.0);
+					var canvas = document.querySelector("canvas")
+					canvas.height = viewport.height;
+					canvas.width = viewport.width;
+					page.render({
+						canvasContext: canvas.getContext('2d'),
+						viewport: viewport
+					});
+				});
+			});
+			};
+		}
+		fileReader.readAsArrayBuffer(file);
+	})
+</script>
+<script type="text/javascript">
+	document.querySelector("#aadhar_card").addEventListener("change", function(e) {
+		var canvasElement = document.querySelector("canvas")
+		var file = e.target.files[0]
+		if (file.type == "application/pdf") {
+			var fileReader = new FileReader();
+			fileReader.onload = function() {
+				var typedarray = new Uint8Array(this.result);
+				PDFJS.getDocument(typedarray).then(function(pdf) {
+				// you can now use *pdf* here
+				console.log("the pdf has ", pdf.numPages, "page(s).")
+				pdf.getPage(pdf.numPages).then(function(page) {
+					// you can now use *page* here
+					var viewport = page.getViewport(2.0);
+					var canvas = document.getElementById("tar")
+					canvas.height = viewport.height;
+					canvas.width = viewport.width;
+					page.render({
+						canvasContext: canvas.getContext('2d'),
+						viewport: viewport
+					});
+				});
+			});
+			};
+		}
+		fileReader.readAsArrayBuffer(file);
+	})
+</script>
+<script type="text/javascript">
+	$(function() {
+		$('#pan_card').on('change', function(event) {
+			var files = event.target.files;
+			$(".page").hide();
+			var image = files[0]
+			if (image.type == "application/pdf") {
+			 $("canvas").show();
+			 $("#target").hide();
+		 }else{
+			 $("canvas").hide();
+			 $("#target").show();
+		 }
+			// here's the file size
+			console.log(image.size);
+			var reader = new FileReader();
+			reader.onload = function(file) {
+				var img = new Image();
+				console.log(file);
+				img.src = file.target.result;
+				$('#target').html(img);
+			}
+			reader.readAsDataURL(image);
+			console.log(files);
+		});
+	});
+</script>
+<script type="text/javascript">
+	$(function() {
+		$('#aadhar_card').on('change', function(event) {
+			var files = event.target.files;
+			var image = files[0]
+			if (image.type == "application/pdf") {
+			 $("#tar").show();
+			 $("#target1").hide();
+		 }else{
+			 $("#tar").hide();
+			 $("#target1").show();
+		 }
+			// here's the file size
+			console.log(image.size);
+			var reader = new FileReader();
+			reader.onload = function(file) {
+				var img = new Image();
+				console.log(file);
+				img.src = file.target.result;
+				$('#target1').html(img);
+			}
+			reader.readAsDataURL(image);
+			console.log(files);
+		});
+	});
+</script>
+<script type="text/javascript">
+	$(function() {
+		$('#profile_image').on('change', function(event) {
+			var files = event.target.files;
+			var image = files[0]
+			// here's the file size
+			console.log(image.size);
+			var reader = new FileReader();
+			reader.onload = function(file) {
+				var img = new Image();
+				console.log(file);
+				img.src = file.target.result;
+				$('#target2').html(img);
+			}
+			reader.readAsDataURL(image);
+			console.log(files);
+		});
+	});
+</script>

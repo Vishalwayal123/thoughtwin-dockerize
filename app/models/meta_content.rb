@@ -1,0 +1,2 @@
+class MetaContent < ApplicationRecord
+end

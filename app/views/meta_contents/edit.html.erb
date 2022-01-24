@@ -1,0 +1,37 @@
+<section class="pb-5 edit-meta">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h1 class="">Editing Meta Content</h1>
+				<div class="right-btndiv">
+					<%= link_to 'Show', @meta_content , class: "show-btn btn"%> |
+				    <%= link_to 'Back',meta_contents_path , class: "back-btn btn"%>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<%= render 'form', meta_content: @meta_content %>
+			</div>
+		</div>
+	</div>
+</section>
+<style type="text/css">
+	h1{
+    color: #000000!important;
+    font-weight: 600;
+    font-size: 40px;
+    padding: 13% 0 4% 2%;
+    display: inline-block;
+  }
+  .show-btn{
+    background: #d94697;
+    color: #fff!important;
+  }
+  .back-btn{
+    background: #d94697;
+    color: #fff!important;
+  }
+  .right-btndiv{
+  	float: right;
+  	padding: 13% 0 4% 0;
+  }
+</style>

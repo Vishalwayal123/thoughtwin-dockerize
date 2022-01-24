@@ -1,0 +1,2 @@
+class SupportEmail < ApplicationRecord
+end

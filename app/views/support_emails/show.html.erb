@@ -1,0 +1,59 @@
+<section class="show-meta ">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h1>your support email</h1>
+				<div class="right-btndiv">
+					<%= link_to 'Edit', edit_support_email_path(@support_email), class: " back-btn btn" %> |
+				   <%= link_to 'Back', support_emails_path, class: "back-btn btn"%>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="show-content">
+					<p id="notice"><%= notice %></p>
+           <ul class="list-unstyled mt-3">
+              <li class="list-item list-view">
+                <span class="width-span">Email :</span> 
+                <span><%= @support_email.email %></span>
+              </li>
+            </ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<style type="text/css">
+	.show-meta{
+		height: calc(100vh - 258px);
+	}
+	h1{
+	    color: #000000!important;
+	    font-weight: 600;
+	    font-size: 40px;
+	    padding: 13% 0 4% 1%;
+	    text-transform: capitalize;
+	    display: inline-block;
+    }
+	.back-btn{
+	    background: #d94697;
+	    color: #fff!important;
+	}
+  .show-meta .list-view span {
+    margin: 0px;
+    line-height: 40px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: #575757;
+    font-size: 16px;
+	}
+  .show-meta span.width-span {
+    margin: 0px;
+    width: 15%;
+    display: inline-block;
+    padding: 0px;
+	}
+	.right-btndiv{
+		padding: 13% 0 4% 0;
+		float: right;
+	}
+</style>

@@ -1,0 +1,37 @@
+<section class="pb-5 edit-blog">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h1 class="">Editing Blog</h1>
+				<div class="float-right right-btndiv">
+					<%= link_to 'Show', @blog , class: "show-btn btn"%> |
+				    <%= link_to 'Back', blogs_path , class: "back-btn btn"%>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<%= render 'form', blog: @blog %>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style type="text/css">
+	h1{
+    color: #000000!important;
+    font-weight: 600;
+    font-size: 40px;
+    padding: 13% 0 4% 2%;
+    display: inline-block;
+  }
+  .show-btn{
+    background: #d94697;
+    color: #fff!important;
+  }
+  .back-btn{
+    background: #d94697;
+    color: #fff!important;
+  }
+  .right-btndiv{
+  	padding: 13% 0 4% 0;
+  }
+</style>

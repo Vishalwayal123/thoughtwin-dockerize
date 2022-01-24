@@ -1,0 +1,397 @@
+<% if params[:controller] == "home" && params[:action] == "index"%>
+  <header style="background: #fff none repeat scroll 0% 0%; height: 70px!important;" >
+<%else%>
+<header style="background: #fff none repeat scroll 0% 0%; height: 70px!important;" >
+  <script type="text/javascript">
+    $(window).scroll(function() {
+    if ($(this).scrollTop() > 100) {
+      $("header").addClass("fixed-navtop");
+    } else {
+      $("header").removeClass("fixed-navtop");
+    }
+    $("header").addClass("fixed-navtp");
+  });
+     $(window).scroll(function() {
+    if ($(this).scrollTop() > 100) {
+      $(".first_logo").addClass("withoutscroll_imglogo");
+    } else {
+     $(".first_logo").removeClass("withoutscroll_imglogo");
+    }
+  });
+  </script>
+  <style type="text/css">
+    .fixed-navtop {
+      background: #fff!important;
+      transition: .5s;
+      top: 0;
+      box-shadow: 0 0 20px 0 #ccc;
+  }
+  .navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover{
+    background: none!important;
+  }
+  .nav-item:hover .nav-link {
+      color: #FB1717 !important;
+      background: transparent!important;
+          border-bottom: 1px solid #fb1717;
+  }
+  .navbar a.nav-link{
+    text-decoration: none!important;
+  }
+  </style>
+<%end%>
+  <div class="top_menu container-fluid relative ">
+    <div class="top_nav">
+      <div class="row">
+        <div class="col-md-12 col-12">
+         <nav class="navbar navbar-expand-md navbar-light p-0 m-0">
+            <a class="navbar-brand" routerlink="/" href="/">
+              <img alt="Thoughtwin" class="img-responsive first_logo" src="/assets/img/header.png">
+            </a>
+            <div class="vector_box">
+               <a href="/contact">
+                  <img alt="Thoughtwin" class="img-responsive first_logovector" src="/assets/img/mobile_vector.png">
+                </a>
+            </div>
+            <button aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarHeader" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarHeader">
+              <%# if @check_user || @is_portfolio || @is_carrer || @is_metatags%>
+               <ul class="navbar-nav white_colorli margin-auto">
+                <li class="nav-item pt-3 pl-xl-0 pl-lg-0 pl-md-2 pl-3 pl-md-0 ml-0 ml-md-0">
+                  <a class="nav-link" href="/about">about us</a>
+                </li>
+                 <li class="nav-item pt-3 pl-xl-0 pl-lg-0 pl-md-2 pl-3 pl-md-0 ml-0 ml-md-4">
+                  <a class="nav-link" href="/portfolios">portfolio</a>
+                </li>
+                 <li class="nav-item pt-3 pl-xl-0 pl-lg-0 pl-md-2 pl-3 pl-md-0 ml-0 ml-md-4">
+                  <a class="nav-link" href="/blogs">blog</a>
+                </li>
+                <li class="nav-item pt-3 pl-xl-0 pl-lg-0 pl-md-2 pl-3 pl-md-0 ml-0 ml-md-4">
+                  <a class="nav-link" href="/ourteam">our team</a>
+                </li>
+                <li class="nav-item pt-3 pl-xl-0 pl-lg-0 pl-md-2 pl-3 pl-md-0 ml-0 ml-md-4">
+                  <a class="nav-link" href="/carrers">careers</a>
+                </li>
+                <li class="nav-item dropdown dropdown-slide dropdown-hover1 service_clickpage pt-3 pl-xl-0 pl-lg-0 pl-md-2 pl-3 pl-md-0 ml-0 ml-md-4 mr-xl-3 mr-lg-3 mr-md-0 mr-0" id="">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     Services
+                  </a>
+                  <div class="dropdown-menu " aria-labelledby="navbarDropdownMenuLink" id="service-dropcontent">
+                    <div class="row drop_padding">
+                      <div class="col-md-4 service-col">
+                        <h3 class="navheading">Mobile App Development</h3>
+                        <ul class="service_list">
+                          <li class="android-icon">
+                            <div class="width_display">
+                               <img src="/assets/img/services/10.png" class="service_img display_hovernone" alt="mobile app development mcq">
+                                <img src="/assets/img/services/hover10.png" class="service_img display_hoverblock" alt="app development company">
+                             </div>
+                            <a class="dropdown-item change_hovercolor" href="/android">Android Development</a>
+                          </li>
+                          <li>
+                             <div class="width_display">
+                               <img src="/assets/img/services/11.png" class="service_img display_hovernone" alt="android and ios app development">
+                               <img src="/assets/img/services/hover11.png" class="service_img display_hoverblock" alt="react native sdk location not found">
+                             </div>
+                            <a class="dropdown-item change_hovercolor" href="/ios">iOS Development</a>
+                          </li>
+                          <li>
+                             <div class="width_display">
+                               <img src="/assets/img/services/12.png" class="service_img display_hovernone" alt="react native vs flutter">
+                               <img src="/assets/img/services/hover12.png" class="service_img display_hoverblock" alt="react native navigation">
+                             </div>
+                            <a class="dropdown-item change_hovercolor" href="/reactnative">React Native Development</a>
+                          </li>
+                        </ul>
+                     </div>
+                      <div class="col-md-8 service-col">
+                        <h3 class="navheading">Web Development</h3>
+                        <div class="row">
+                          <div class="col-md-6">
+                            <ul class="service_list">
+                              <li>
+                               <div class="width_display">
+                                 <img src="/assets/img/services/16.png" class="service_img display_hovernone" alt="python development environment">
+                                 <img src="/assets/img/services/hover16.png" class="service_img display_hoverblock" alt="python enumerate">
+                               </div>
+                              <a class="dropdown-item change_hovercolor" href="/python">Python Development</a>
+                            </li>
+                              <li>
+                                 <div class="width_display">
+                                   <img src="/assets/img/services/13.png" class="service_img display_hovernone" alt="angularjs directive">
+                                   <img src="/assets/img/services/hover13.png" class="service_img display_hoverblock" alt="angularjs service">
+                                 </div>
+                                <a class="dropdown-item change_hovercolor" href="/angular">AngularJS Development</a>
+                              </li>
+                              <li>
+                                 <div class="width_display">
+                                   <img src="/assets/img/services/14.png" class="service_img display_hovernone" alt="nodejs download">
+                                   <img src="/assets/img/services/hover14.png" class="service_img display_hoverblock" alt="nodejs read file">
+                                 </div>
+                                <a class="dropdown-item change_hovercolor" href="nodejs">NodeJS Development</a>
+                              </li>
+                               <li>
+                                 <div class="width_display">
+                                   <img src="/assets/img/services/15.png" class="service_img display_hovernone" alt="nodejs typescript">
+                                   <img src="/assets/img/services/hover15.png" class="service_img display_hoverblock" alt="node js fs">
+                                 </div>
+                                <a class="dropdown-item change_hovercolor" href="phpdev">PHP Development</a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="col-md-6">
+                            <ul class="service_list">
+                              <li>
+                                <div class="width_display">
+                                   <img src="/assets/img/services/12.png" class="service_img display_hovernone" alt="react jsx">
+                                   <img src="/assets/img/services/hover12.png" class="service_img display_hoverblock" alt="react js vs react native">
+                                 </div>
+                                <a class="dropdown-item change_hovercolor" href="/reactdev">ReactJS Development</a>
+                              </li>
+                            <li>
+                              <div class="width_display">
+                                 <img src="/assets/img/services/17.png" class="service_img display_hovernone" alt="mern stack projects">
+                                 <img src="/assets/img/services/hover17.png" class="service_img display_hoverblock" alt="mern stack developer salary">
+                               </div>
+                              <a class="dropdown-item change_hovercolor" href="/meanstack">MEAN Stack devlopment</a>
+                            </li>
+                            <li>
+                               <div class="width_display">
+                                 <img src="/assets/img/services/18.png" class="service_img display_hovernone" alt="mern stack developer">
+                                 <img src="/assets/img/services/hover18.png" class="service_img display_hoverblock" alt="mern stack tutorial">
+                               </div>
+                              <a class="dropdown-item change_hovercolor" href="/mernstack">MERN Stack Devlopment</a>
+                            </li>
+                            <li>
+                               <div class="width_display">
+                                 <img src="/assets/img/services/19.svg" class="service_img display_hovernone" alt="rory gibbs">
+                                 <img src="/assets/img/services/hover19.png" class="service_img display_hoverblock" alt="ror2 items">
+                               </div>
+                              <a class="dropdown-item change_hovercolor" href="/ror">Ruby On Rails</a>
+                            </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-12 p-0">
+                        <div class="workshop_box">
+                          <h3>Discovery workshop</h3>
+                          <p> Solutions to complement your company’s goals on a variety of platforms.</p>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+               <!-- <li class="nav-item pt-3 pl-xl-0 pl-lg-0 pl-md-2 pl-3 pl-md-0 ml-0 ml-md-4">
+                  <a class="nav-link" href="/blogs">blog</a>
+                </li> -->
+                <!-- <li class="nav-item pt-3 pl-xl-0 pl-lg-0 pl-md-3 pl-3 pl-md-0 ml-0 ml-md-4 work_link">
+                  <a class="nav-link" href="#">work</a>
+                </li> -->
+
+                <li class="nav-item pt-3 pl-xl-0 pl-lg-0 pl-md-3 pl-3 pl-md-0 ml-0 ml-md-4 work_link d-md-none d-block mt-3">
+                  <a class="nav-link" href="/contact">Contact Us</a>
+                </li>
+              </ul>
+             <div class="mt-2 ml-xl-0 ml-lg-0 ml-md-0 ml-3 contact_usbtndiv">
+                <a class="nav-link" href="/contact">
+                  <button class="btn contact_usbtn">Contact Us
+                    <img src="/assets/img/top-arrow1.png" class="arrow_img" alt="Right-arrow">
+                    <img src="/assets/img/vector-hover.png" class="arrow_img1" alt="Right-arrow">
+                  </button>
+                </a>
+             </div>
+             <!-- mobile view -->
+             <div class="service_innerpage">
+              <div>
+                <ul class="breadcrumb">
+                  <li class="breadcrumb-item list-inline-item back-tohome">Home</li>
+                  <li class="breadcrumb-item list-inline-item active services_tabs">services</li>
+                </ul>
+              </div>
+              <ul class="services_list servicelist_tabs">
+                <li class="add_developclick">
+                  <h4>Mobile app Development</h4>
+                  <img src="/assets/img/service_arrow.png" class="service_arrowimg" alt="software for android development">
+                </li>
+                <div class="services_listData " id="serviceblock">
+                <ul class="service_list">
+                  <li class="android-icon">
+                    <div class="width_display">
+                       <img src="/assets/img/services/10.png" class="service_img display_hovernone"  alt="software for android development">
+                        <img src="/assets/img/services/hover10.png" class="service_img display_hoverblock" alt="softwares for android development">
+                     </div>
+                    <a class="dropdown-item change_hovercolor" href="/android">Android Development</a>
+                  </li>
+                  <li>
+                     <div class="width_display">
+                       <img src="/assets/img/services/11.png" class="service_img display_hovernone"  alt="xcode for windows">
+                       <img src="/assets/img/services/hover11.png" class="service_img display_hoverblock" alt="swift ios">
+                     </div>
+                    <a class="dropdown-item change_hovercolor" href="/ios">iOS Development</a>
+                  </li>
+                  <li>
+                     <div class="width_display">
+                       <img src="/assets/img/services/12.png" class="service_img display_hovernone" alt="react native web ">
+                       <img src="/assets/img/services/hover12.png" class="service_img display_hoverblock" alt="react native js">
+                     </div>
+                    <a class="dropdown-item change_hovercolor" href="/reactnative">React Native Development</a>
+                  </li>
+                </ul>
+              </div>
+                <li class="web_developclick">
+                  <h4>web development</h4>
+                  <img src="/assets/img/service_arrow.png" class="service_arrowimg" alt="react native webview">
+                </li>
+                <div class="services_listData1 " id="serviceblock">
+                <ul class="service_list">
+                  <li>
+                   <div class="width_display">
+                     <img src="/assets/img/services/16.png" class="service_img display_hovernone" alt="python backend">
+                     <img src="/assets/img/services/hover16.png" class="service_img display_hoverblock" alt="python web development">
+                   </div>
+                  <a class="dropdown-item change_hovercolor" href="/python">Python Development</a>
+                </li>
+                  <li>
+                     <div class="width_display">
+                       <img src="/assets/img/services/13.png" class="service_img display_hovernone" alt="angular front end">
+                       <img src="/assets/img/services/hover13.png" class="service_img display_hoverblock" alt="angularjs developers">
+                     </div>
+                    <a class="dropdown-item change_hovercolor" href="/angular">AngularJS Development</a>
+                  </li>
+                  <li>
+                     <div class="width_display">
+                       <img src="/assets/img/services/14.png" class="service_img display_hovernone" alt="nodejs backend">
+                       <img src="/assets/img/services/hover14.png" class="service_img display_hoverblock" alt="nodeJS development">
+                     </div>
+                    <a class="dropdown-item change_hovercolor" href="/nodejs">NodeJS Development</a>
+                  </li>
+                   <li>
+                     <div class="width_display">
+                       <img src="/assets/img/services/15.png" class="service_img display_hovernone" alt="php backend">
+                       <img src="/assets/img/services/hover15.png" class="service_img display_hoverblock" alt="laravel developer">
+                     </div>
+                    <a class="dropdown-item change_hovercolor" href="/phpdev">PHP Development</a>
+                  </li>
+                  <li>
+                    <div class="width_display">
+                       <img src="/assets/img/services/12.png" class="service_img display_hovernone" alt="react developer">
+                       <img src="/assets/img/services/hover12.png" class="service_img display_hoverblock" alt="react front end">
+                     </div>
+                    <a class="dropdown-item change_hovercolor" href="/reactJS">ReactJS Development</a>
+                  </li>
+                  <li>
+                  <div class="width_display">
+                     <img src="/assets/img/services/17.png" class="service_img display_hovernone" alt="mern stack courses">
+                     <img src="/assets/img/services/hover17.png" class="service_img display_hoverblock" alt="mern stack developer">
+                   </div>
+                  <a class="dropdown-item change_hovercolor" href="/meanstack">MEAN Stack devlopment</a>
+                </li>
+                 <li>
+                   <div class="width_display">
+                     <img src="/assets/img/services/18.png" class="service_img display_hovernone" alt="mern stack projects">
+                     <img src="/assets/img/services/hover18.png" class="service_img display_hoverblock" alt="mern developer">
+                   </div>
+                  <a class="dropdown-item change_hovercolor" href="/mernstack">MERN Stack Devlopment</a>
+                </li>
+                <li>
+                   <div class="width_display">
+                     <img src="/assets/img/services/19.svg" class="service_img display_hovernone" alt="mern stack full form">
+                     <img src="/assets/img/services/hover19.png" class="service_img display_hoverblock" alt="ruby on rails developer">
+                   </div>
+                  <a class="dropdown-item change_hovercolor" href="/ror">Ruby On Rails</a>
+                </li>
+                </ul>
+              </div>
+              </ul>
+            </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div> 
+</header>
+<script type="text/javascript">
+  $(window).scroll(function() {
+  if ($(this).scrollTop() > 100) {
+    $("header").addClass("fixed-navtop");
+  } else {
+    $("header").removeClass("fixed-navtop");
+  }
+});
+   $(window).scroll(function() {
+    if ($(this).scrollTop() > 100) {
+      $(".first_logo").addClass("withoutscroll_imglogo");
+    } else {
+     $(".first_logo").removeClass("withoutscroll_imglogo");
+    }
+  });
+</script>
+<style type="text/css">
+  .fixed-navtop {
+    background: #fff!important;
+    transition: .5s;
+    top: 0;
+    box-shadow: 0 0 20px 0 #ccc;
+}
+.navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover{
+  background: none!important;
+}
+.nav-item:hover .nav-link {
+    color: #fb1717 !important;
+    background: transparent!important;
+        border-bottom: 1px solid #fb1717;
+}
+.modal_hidden{
+  display: none;
+}
+.services_listData{
+  display: none;
+}
+.services_listData1{
+  display: none;
+}
+</style>
+<script type="text/javascript">
+  if (window.matchMedia('(max-width: 768px)').matches)
+    {
+      $(document).ready(function(){
+      $(".service_clickpage").click(function(){
+        $(".navbar-nav").toggle();
+        $(".service_innerpage").toggle();
+      });
+      $(".add_developclick").click(function(){
+        // $(".services_list").slideToggle();
+        $(".services_listData").slideToggle();
+      });
+      $(".web_developclick").click(function(){
+        // $(".services_list").toggle();
+        $(".services_listData1").slideToggle();
+      });
+      $(".navbar-light .navbar-toggler-icon").click(function(){
+        $(".service_innerpage").toggle();
+      });
+       $(".back-tohome").click(function(){
+        $(".service_innerpage").toggle();
+        $(".navbar-nav").toggle();
+      });
+    });
+    }
+  // $(document).ready(function(){
+  //   $(".service_clickpage").click(function(){
+  //     $(".service_clickpage #service-dropcontent").toggle();
+  //   });
+  // });
+$(function () {
+    // Add active class to the current button (highlight it)
+    // this will get the full URL at the address bar
+    var url = window.location.href;
+    // passes on every "a" tag
+    $("header ul.navbar-nav li a").each(function() {
+      // checks if its the same on the address bar
+      if(url == (this.href)) {
+        $(this).closest("li").addClass("active");
+      }
+    });
+  });
+</script>

@@ -1,0 +1,78 @@
+<section class="show-meta ">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h1>your meta content</h1>
+				<div class="right-btndiv">
+					<%= link_to 'Edit', edit_meta_content_path(@meta_content), class: " back-btn btn" %> |
+				    <%= link_to 'Back', meta_contents_path, class: "back-btn btn"%>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="show-content">
+					<p id="notice"><%= notice %></p>
+           <ul class="list-unstyled mt-3">
+              <li class="list-item list-view">
+                <span class="width-span">Title :</span> 
+                <span><%= @meta_content.title %></span>
+              </li>
+              <li class="list-item list-view">
+                <span class="width-span">Description :</span> 
+                <span><%= @meta_content.description %></span>
+              </li>
+              <li class="list-item list-view">
+                <span class="width-span">Website :</span> 
+                <span> <%= @meta_content.website %></span>
+              </li>
+              <li class="list-item list-view">
+                <span class="width-span">Keyword : </span> 
+                <span><%= @meta_content.keyword %></span>
+              </li>
+              <li class="list-item list-view">
+                <span class="width-span">Page : </span> 
+                <span><%= @meta_content.page %></span>
+              </li>                        
+            </ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<style type="text/css">
+	.show-meta{
+    height: calc(100vh - 258px);
+  }
+	h1{
+    color: #000000!important;
+    font-weight: 600;
+    font-size: 40px;
+    padding: 13% 0 4% 0;
+    display: inline-block;
+    text-transform: capitalize;
+    }
+	.back-btn{
+    background: #d94697;
+    color: #fff!important;
+	}
+	.show-content{
+	 	margin: 0% 0% 2%;
+	}
+  .show-meta .list-view span {
+    margin: 0px;
+    line-height: 40px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: #575757;
+    font-size: 16px;
+	}
+  .show-meta span.width-span {
+    margin: 0px;
+    width: 10%;
+    display: inline-block;
+    padding: 0px;
+	}
+	.right-btndiv{
+		float: right;
+		padding: 13% 0 0 0;
+	}
+</style>

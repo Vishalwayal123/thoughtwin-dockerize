@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /guide
+Disallow: /guideline
+Disallow: /users/edit
+Disallow: /blogs
+Sitemap: https://thoughtwin.com/sitemap.xml

@@ -1,0 +1,23 @@
+version: "3.8"
+services:
+  db:
+    image: postgres:14.1-alpine
+    container_name: thoughtwin_db
+    environment:
+      POSTGRES_DATABASE: thoughtwin_development
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_HOST_AUTH_METHOD: trust
+    ports:
+      - "5432:5432"
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    environment:
+      POSTGRES_HOST: db
+      POSTGRES_DATABASE: thoughtwin_development
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres

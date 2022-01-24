@@ -1,0 +1,82 @@
+<%= form_for AccountDetail.new, method: :post do |form| %>
+  <div>
+    <%= form.label :account_number %><br>
+    <%= form.text_field :account_number %>
+  </div>
+  <div>
+    <%= form.label :ifsc_code %><br>
+    <%= form.text_field :ifsc_code %>
+  </div>
+  <div>
+    <%= form.label :branch_address %><br>
+    <%= form.text_field :branch_address %>
+  </div>
+  <div>
+    <%= form.label :pan_number %><br>
+    <%= form.text_field :pan_number %>
+  </div>
+  <div>
+    <%= form.label :aadhar_number %><br>
+    <%= form.text_field :aadhar_number %>
+  </div>
+  <div id="pan_card">
+    <%= form.label :pan_card %><br>
+    <%= form.file_field :pan_card %>
+  </div>
+  <div id="target"></div>
+  <div id="aadhar_card">
+    <%= form.label :aadhar_card %><br>
+    <%= form.file_field  :aadhar_card %>
+  </div>
+  <div id="target1"></div>
+  <div>
+   <%= form.hidden_field :user_id, value: current_user.id%>
+  </div>
+  <div>
+    <%= form.submit %>
+  </div>
+  <br>
+<% end %>
+<script type="text/javascript">
+  $(function() {
+    $('#pan_card').on('change', function(event) {
+      var files = event.target.files;
+      var image = files[0]
+      // here's the file size
+      console.log(image.size);
+      var reader = new FileReader();
+      reader.onload = function(file) {
+        var img = new Image();
+        console.log(file);
+        img.src = file.target.result;
+        $('#target').html(img);
+      }
+      reader.readAsDataURL(image);
+      console.log(files);
+    });
+  });
+</script>
+<script type="text/javascript">
+  $(function() {
+    $('#aadhar_card').on('change', function(event) {
+      var files = event.target.files;
+      var image = files[0]
+      // here's the file size
+      console.log(image.size);
+      var reader = new FileReader();
+      reader.onload = function(file) {
+        var img = new Image();
+        console.log(file);
+        img.src = file.target.result;
+        $('#target1').html(img);
+      }
+      reader.readAsDataURL(image);
+      console.log(files);
+    });
+  });
+</script>
+
+
+
+
+

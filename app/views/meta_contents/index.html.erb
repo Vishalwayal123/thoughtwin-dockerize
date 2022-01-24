@@ -1,0 +1,84 @@
+<section class="common-btndiv pb-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="meta_heading">Meta Contents</h1>
+         <p id="notice"><%= notice %></p>
+      </div>
+      <div class="col-md-12">
+        <div class="table-responsive">
+          <table class="table table-bordered mb-4">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Website</th>
+                <th>Keyword</th>
+                <th>Page</th>
+                <% if @check_user || @is_metatags%>
+                 <th colspan="3">Actions</th>
+                <% end %>
+              </tr>
+            </thead>
+            <tbody>
+              <% @meta_contents.each do |meta_content| %>
+                <tr>
+                  <td><%= meta_content.title %></td>
+                  <td><%= meta_content.description %></td>
+                  <td><%= meta_content.website %></td>
+                  <td><%= meta_content.keyword %></td>
+                  <td><%= meta_content.page %></td>
+                  <% if @check_user || @is_metatags%>
+                    <td><%= link_to 'Show', meta_content ,class: "show-link"%></td>
+                    <td><%= link_to 'Edit', edit_meta_content_path(meta_content) ,class: "edit-link"%></td>
+                    <td><%= link_to 'Destroy', meta_content, method: :delete, data: { confirm: 'Are you sure?' } ,class: "delete-link"%></td>
+                  <% end %>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+          </div>
+          <br>
+          <% if @check_user || @is_metatags%>
+          <div class="text-center">
+           <%= link_to 'New Meta Content', new_meta_content_path ,class: "btn new_metacontentbtn"%>
+         </div>
+          <% end %>
+      </div>
+    </div>
+  </div>
+</section>
+<style type="text/css">
+  h1{
+    color: #000000!important;
+    font-weight: 600;
+    font-size: 40px;
+    padding: 13% 0 4% 0;
+  }
+  table thead tr th{
+    color: #000;
+    font-size: 15px;
+    font-weight: 500;
+  }
+  table tbody tr td{
+    color: #575757;
+    text-transform: capitalize;
+  }
+  .show-link{
+    color: green!important;
+  }
+  .edit-link{
+    color: blue!important;
+  }
+  .delete-link{
+     color: red!important;
+  }
+  .common-btndiv .submit-btn{
+    width: 18%;
+    padding: 14px 0;
+    margin: 16px auto 40px;
+    text-align: center;
+    color: #fff;
+    font-weight: 500;
+  }
+</style>

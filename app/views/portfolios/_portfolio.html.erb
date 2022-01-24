@@ -1,0 +1,291 @@
+<!-- meta tags -->
+<meta name="title" content="Our portfolio reflects why to hire us and  shows dedication of our best it developers." title="Our Work Samples & Projects">
+<link rel="canonical" href="https://thoughtwin.com/portfolios/" />
+<section class="portfolio_header">
+  <div class="container">
+    <div class="row first_row">
+      <div class="col-md-8">
+        <h3 class="quality_head">We believe in clean & quality work </h3>
+        <p>Take a look at the work we did for their marketing.</p>
+      </div>
+      <% if @check_user || @is_portfolio %>
+        <div class="col-md-4  add-portfoliobtn">
+          <%= link_to 'Add Portfolio', new_portfolio_path%>
+        </div>
+      <% end %>
+    </div>
+  </div> 
+</section>
+<%= render "/home/portfolio_header"%>
+<section class="portfolio_list">
+  <div class="container-fluid portfolio_padding">
+    <% @portfolios.each do |portfolio| %>
+      <div class="row abc11">
+        <!-- <div class="col-md-1 portfolio_heading">
+          <p><%#= portfolio.title%></p>
+        </div> -->
+        <div class="col-md-7 portfolio_images">
+          <%= image_tag(portfolio.image.url, alt: "portfolio upload image")%> 
+        </div>
+        <div class="col-md-4 portfolio_contact">    
+            <div class="hide_text">
+              <h1><%= portfolio.title%></h1>
+              <p class="gray_text"><%= portfolio.description%></p>
+            </div> 
+            <p><%= portfolio.language%></p>
+            <!-- # <h2><%#= portfolio.title%></h2> -->
+            <% if @check_user || @is_portfolio %>
+              <div class="sitelink link float-set">
+                <%= link_to 'Edit', edit_portfolio_path(portfolio)%>
+              </div>
+              <div class="sitelink links float-set">
+                <%= link_to 'Delete', portfolio_path(portfolio), data: { confirm: 'Are you sure?' }, method: :delete %>
+              </div>
+            <% end %>
+            <% if portfolio.web_link.present?%>
+              <div class="sitelink float-set1">
+                <%= link_to 'Visit Website', portfolio.web_link %>
+              </div>
+            <% end %>
+        </div>   
+      </div> 
+    <% end %>
+  </div>  
+</section>
+<style type="text/css">
+.row.first_row{
+  padding: 16px 0px 30px 0px;
+}
+.abc11 {
+    border-top: 1px solid #ccc;
+    border-bottom: none !important;
+}
+.portfolio_logo_img img {
+    width: 200px;
+    margin-top: 26px;
+}
+.cube {
+  width: 130px;
+    height: 44px;
+    border-left: 3px solid #ef6f3b;
+    border-right: 3px solid #d742a0;
+    border-top: 3px solid #ef6f3b;
+    border-bottom: 3px solid #d742a0;
+    border-radius: 6px;
+    box-sizing: border-box;
+    background-position: 0 0, 0 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 4px;
+    background: linear-gradient(to right , #ef6f3b , #d742a0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    line-height: 26px;
+    text-align: center;
+}
+.portfolio_heading p {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    text-align: center;
+    width: 249px;
+}
+.see_case img {
+    width: 20%;
+    margin-left: 6px;
+}
+.see_case a{
+  background: linear-gradient(to right , #ef6f3b , #d742a0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    font-size: 20px;
+}
+.see_case a:hover{
+  text-decoration: none;
+  color: #222;
+  font-size: 20px;
+}
+.portfolio_header p {
+    color: #000000;
+    font-weight: 600;
+    line-height: 1;
+    margin-top: 10px;
+}
+.portfolio_header h3 {
+    color: #212529;
+    font-weight: 500;
+}
+.portfolio_images {
+    padding: 0;
+    box-shadow: 0px 0px 20px 0px #eee;
+}
+.footer_bottom {
+    margin-top: 30px;
+}
+.menu_banner{
+    background-image: url('../../assets/img/menu_banner.jpg');
+    background-repeat: no-repeat;
+    background-position:top;
+    padding-top: 20px;
+  }
+  .menu__list .menu__link{
+    text-transform: uppercase;
+  }
+  .menu_banner.menu_banner {
+    background-size: cover !important;
+}
+.portfolio_contact{
+    position: relative;
+}
+.sitelink{
+    position:relative;
+    margin-top: 20px;
+/*    right: 30px;
+    bottom: 20px*/
+}
+.sitelink a{
+    text-decoration: none;
+    background: #FF0000;
+    color: #fff;
+    padding: 10px 30px;
+    font-weight: bold;
+    border-radius: 100px;
+}
+.sitelink a:hover{
+  background: #FF0000 !important;
+     color: #fff !important;
+      -webkit-transition: background-color 1s ease-out;
+  -moz-transition: background-color 1s ease-out;
+  -o-transition: background-color 1s ease-out;
+  transition: background-color 1s ease-out;
+}
+.link {
+  left: 10px !important;
+}
+.links {
+  left: 120px;
+}
+.nopadd{
+    padding: 0;
+}
+section.porfolio_tab{
+    border: 1px solid #eee;
+   
+    border-right: 0;
+    border-left: 0;
+}
+.porfolio_tab h3{
+    margin-bottom: 0px;
+     padding: 15px 0;
+     cursor: pointer;
+} 
+.porfolio_tab h3:hover{
+     background: #FF0000 !important;
+     color: #fff !important;
+     -webkit-transition: background-color 2s ease-out;
+  -moz-transition: background-color 2s ease-out;
+  -o-transition: background-color 2s ease-out;
+  transition: background-color 2s ease-out;
+}
+.active_tab{
+    background-color: #FF0000;
+    color: #fff;
+    
+}
+.border_both{
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+}
+.portfolio_div h3:focus {
+    outline: none;
+}
+@media(max-width:768px){
+    .container {
+        max-width: 730px;
+    }
+    .top_menu {
+        background-color: inherit;
+    }
+    .portfolio_header h3{
+        font-size: 1.3rem;
+        text-align: center;
+    }
+    .portfolio_header p{
+        text-align: center;
+    }
+}
+@media(max-width:767px){
+    .portfolio_div{
+        width: 33.33%!important;
+    }
+    .portfolio_header h3{
+        text-align: center;
+        font-size: 20px;
+        margin-top: 33px !important;
+    }
+    .portfolio_header p{
+        text-align: center;
+        font-size: 14px;
+        margin-top: 8px !important;
+    }
+    .portfolio_contact h1{
+        margin: 5px 0 0 0;
+        font-size: 20px;
+        font-size: 17px;
+        line-height: 24px;
+    }
+    .portfolio_contact p {
+        margin: 13px 0 0 0 !important;
+    font-weight: normal!important;
+    }
+    .portfolio_contact h2{
+        margin-bottom: 50px;
+        font-size: 17px;
+       padding-bottom: 10px;
+       padding-top: 7px;
+       font-weight: 500;
+    }
+    section.porfolio_tab{
+      margin-top: 10px;
+    }
+    .footer_bottom {
+        margin-top: 0px !important;
+    }
+    .sitelink{
+    right: 0;
+    bottom: 14px;
+    left: 0;
+    margin: 0 auto;
+}
+.port_height {
+    margin-top: 20px!important;
+}
+.talk-div span{
+    margin-top: 18px !important;
+    padding-top: 9px!important;
+}
+.porfolio_tab h3{
+    font-size: 11px;
+}
+.portfolio_images img{
+    border-right: 0;
+}
+.sitelink{
+    position: relative!important;
+    display: inline-block!important;
+}
+.sitelink a{
+    margin-bottom: 6px!important;
+}
+.portfolio_contact h2{
+    margin-bottom: 24px!important;
+}
+}
+@media screen and (max-width: 360px){
+.talk-div span {
+    padding: 10px 4px !important;
+}
+}
+</style>

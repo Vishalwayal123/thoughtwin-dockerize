@@ -1,0 +1,46 @@
+<head>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css">
+<script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.4.2/chosen.jquery.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.4.2/chosen.css">
+</head>
+<section class="pb-5">
+	<div class="container">
+	<div class="row">
+		<div class = 'col-md-8 offset-2'>
+  <h1 class = "text-center">New Blog Post</h1>
+  <%= simple_form_for @blog, url: blogs_path do |f| %>
+    <%= f.input :title %>
+    <%= f.input :tag_ids, as: :select, collection: Tag.order(:name), label_method: :name, input_html: {multiple: true,class: "chzn-select"}  %>
+    <%= f.submit "Next", class: 'btn btn-lg btn-primary float-right' %>
+  <% end %>
+</div>
+	</div>
+</div>
+</section>
+
+
+<style type="text/css">
+	h1{
+    color: #000000!important;
+    font-weight: 600;
+    font-size: 40px;
+    padding: 13% 0 4% 2%;
+    display: inline-block;
+  }
+  .back-btn{
+    background: #d94697;
+    color: #fff!important;
+  }
+  .right-btndiv{
+  	float: right;
+  	padding: 13% 0 4% 0;
+  }
+</style>
+
+<script type="text/javascript">
+$(function() {
+    $(".chzn-select").chosen({no_results_text: "Oops, nothing found!",width: "95%"});
+});
+</script>

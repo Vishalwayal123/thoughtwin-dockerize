@@ -1,0 +1,332 @@
+<meta name="title" content="Life in Thoughtwin is just a lot more than a job for more Job update visit our careers linkedin page ." title="boast your Carrers with Thoughtwin ">
+<link rel="canonical" href="https://thoughtwin.com/carrers/" />
+<section class="container-fluid banner12">
+<div class="banner_img"></div>
+<div class="port_heading text-center">
+  <h2> CAREERS </h2>
+  <p class="career_text career_heading">If winning is your mission, there is no better place than ThoughtWin</p>
+</div> 
+</section>
+<section class="container careers_content">
+<h2 class="text-center">Build your career with us</h2>
+<div class="row">
+<div class="col-md-12 offers_vibrant">
+  <p> <strong>ThoughtWin IT solutions </strong>  offers a vibrant environment, where your talent, expertise and knowledge get a great chance to come to the fore. Compensation that is on par with the best in the industry, and performance-oriented incentives are but some of the benefits you get when you become a member of the ThoughtWin family.</p>
+  <p> Continuous learning, knowledge sharing and empowerment are fueled by ThoughtWin's culture that is built to instill a feeling of belonging and camaraderie among the ThoughtWin's family members. </p> 
+  <p> For an interested and suitable person who wants to express his idea and innovations, ThoughtWin IT Solutions is an absolute spot to became a marvelous professional in web technology world. </p>
+</div>
+</div>
+</section>
+<section class="container applt_job current-openings1">
+	<h3 class="text-center mb-4 mb-xl-5 mb-lg-5 mb-md-5"> Current Openings</h3>
+  <% if @check_user || @is_carrer %>
+  <div class="MarginAuto">
+   <%= link_to 'Add career', new_carrer_path,class:"site_btn btn_join career_btn" %>
+ </div>
+  <% end %>
+	  <div class="row mt-4">  
+	   <% @carrers.each do |carrer| %>
+	    <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+	      <div class="card">
+	        <div class="card-body">
+	          <h5 class="card-title"><%= carrer.title %></h5>
+	          <ul>
+	            <li>
+	              Experienced required : <%= carrer.time_duration %>
+	            </li>
+              <li>
+                <%= carrer.description %>
+              </li>
+	          </ul>
+	          <ul class="list-inline">
+              <% if @check_user || @is_carrer %>
+  	          	<li class="list-inline-item carrer-btnlist"><%= link_to 'edit', edit_carrer_path(carrer) %></li>
+  	          	<li class="list-inline-item carrer-btnlist"><%= link_to 'delete', carrer_path(carrer), data: { confirm: 'Are you sure?' }, method: :delete  %></li>
+              <% end %>
+	          </ul>
+	        </div>
+	      </div>
+	    </div>
+	  <% end %>
+	  </div>
+</section>
+  <div class="container text-center">
+    <p class="contact-career">
+      For more details please contact here 
+    </p>
+    <a href="tel:+91 9977069348" class="contact-career-link">+91 9977069348</a>
+    <a href="mailto:hr@thoughtwin.com" class="contact-career-link"> hr@thoughtwin.com </a>
+  </div>
+<style type="text/css">
+  
+.form-div12 {
+    background: none;
+    margin-top: 0;
+}
+.submit_button{
+  margin:-12px 0 50px 0 !important;
+}
+.career_text .career_heading {
+    color: #fff!important;
+    font-size: 16px!important;
+    text-shadow: 0 0 5px #ccc!important;
+    padding-top: 10px!important;
+}
+.menu_banner{
+    background-image: url('../../assets/img/menu_banner.jpg');
+    background-repeat: no-repeat;
+    background-position:top;
+    padding-top: 20px;
+  }
+  .menu__list .menu__link{
+    text-transform: uppercase;
+  }
+  .menu_banner.menu_banner {
+    background-size: cover !important;
+}
+.submit-btn {
+    background-image: linear-gradient(to right, rgba(213,63,168,1) 0%, rgba(239,110,59,1) 100%) !important;
+    border: none;
+    padding: 14px 60px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: left;
+    display: block;
+    color: #fff;
+    margin: 0 0 0px 0;
+}
+.submit-btn  a{
+  color: #fff;
+}
+.submit-btn  a:hover{
+  text-decoration: none;
+}
+.submit-btn:hover{
+  background-image: linear-gradient(to right, rgba(239,110,59,1) 0%, rgba(213,63,168,1) 100%) !important;
+}
+.submit-btn{
+  cursor: pointer;
+}
+.paddingLeft15px{
+  padding: 0 15px;
+}
+.submit-btn{
+  padding: 14px 54px !important;
+}
+textarea{
+  margin: 10px 0 0 0  !important;
+}
+.form-div textarea.form-control {
+    border: 1px solid #ccc;
+}
+.invalid-feedback {
+  text-align: left;
+  color: red;
+}
+.submitMsg{
+    color: green;
+    margin: 0 0 20px 0;
+}
+@media (max-width:1024px){
+    .banner12{
+        background-position: top;
+        height: 650px;
+    }
+    .port_heading{
+        top: 22%;
+    }
+    .career_text {
+        color: green ;
+        font-weight: bold;
+    }
+    .careers_content h2:after{
+        width: 384px;
+        margin-left: -40%;
+    }
+}
+@media (max-width:768px){
+    .careers_content h2:after{
+        width: 384px;
+        margin-left: -54%;
+    }
+    .banner12{
+        height: 350px;
+    }
+    .whit_text .font_size_12px{
+        font-size: 10px;
+    }
+    .career_text {
+        color: green  ;
+        font-weight: bold;
+    }
+}
+@media (max-width:767px){
+    .content{
+        margin-top: 20px;
+    }
+    .submit_bt{
+        text-align: center;
+    }
+    .input{
+        max-width: 100%;
+    }
+    .top_header_menu {
+        padding: 0 0 0px 0;
+    }
+    .port_heading {
+        top: 50%;
+    }
+    .container{
+        max-width: 100%;
+    }
+    .careers_content h2{
+      padding-top: 18px;
+    }
+    .careers_content h2:after{
+       margin-left: -51%;
+   }
+.menu_banner{
+    background: #000;
+  } 
+  .menu_bg{
+      display: none;
+  }
+  ul.social-icon{
+    margin-bottom: 6rem;
+  }
+  .port_heading h2{
+      display:none;
+  }
+  p.career_text.career_heading {
+    margin-top: 27px;
+}
+}
+@media (max-width:736px){
+    .careers_content h2:after{
+        margin-left: -53%;
+    }
+    .copy_right {
+        margin-top: 20px;
+    }
+}
+@media (max-width:667px){
+    .careers_content h2:after{
+        margin-left: -58%;
+    }
+    .copy_right {
+        margin-top: 30px;
+    }
+}
+@media(min-width: 415px) and (max-width: 767px) {
+    .port_heading {
+        top: 74% !important;
+        padding: 10px !important;
+    }
+}
+@media (max-width:414px){
+    .careers_content h2:after{
+         width: 300px;
+        margin-left: -75%;
+    }
+    .careers_content h2{
+        font-size: 24px;
+    }
+    .banner12 {
+        height: 260px;
+    }
+  .submit-btn{
+        display: unset;
+        margin: 0 0 50px 0px;
+    }
+    .offers_vibrant p{
+        font-size: 13px;
+    }
+    .port_heading {
+        top: 58%;
+    }
+    .careers_content{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .copy_right {
+        margin-top: 20px;
+    }
+    .talk-div span{
+        margin-top: 2px !important;
+        padding: 7px !important;
+        padding-top: 7px !important;
+    }
+    .mob_width_50 img {
+        margin-top: 35px;
+    }
+    .paddingLeft15px{
+     position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+form{
+    margin-top: 20px;
+}
+.career_text{
+    font-size: 13px;
+}
+}
+@media (max-width:375px){
+    .careers_content h2:after{
+         width: 300px;
+        margin-left: -82%;
+    }
+    .careers_content h2{
+        font-size: 24px;
+    }
+    .banner12 {
+        height: 220px;
+    }
+.submit-btn{
+        display: unset;
+    }
+    .offers_vibrant p{
+        font-size: 13px;
+    }
+    .port_heading {
+        top: 62% !important;
+    }
+    .talk-div a span {
+        margin-top: 24px!important;
+    }
+    .mob_width_50 img {
+        margin-top: 50px;
+    }
+    .port_heading {
+        top: 58% !important;
+    }
+    .career_text {
+    font-size: 12px;
+}
+}
+@media (max-width:320px){
+    .careers_content h2:after{
+        width: 280px;
+    margin-left: -96%;
+    }
+    .talk-div a span {
+        padding: 3px 3px!important;
+        margin-top: 24px!important;
+    }
+    .mob_width_50 img {
+        margin-top: 50px;
+    }
+    .port_heading {
+        top: 49% !important;
+    }
+}
+p.career_text.career_heading {
+    color: #fff!important;
+    padding-top: 10px!important;
+    text-shadow: 0 0 5px #000!important;
+}
+</style>

@@ -1,0 +1,67 @@
+<section class="blog-form pb-5 common-btndiv pad carrer_pagenew">
+  <div class="container">
+    <%= form_for @carrer do |f| %>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <div class="field">
+              Title: <%= f.text_field :title, placeholder: "Title", class: "form-control" %>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <div class="field">
+              Experience: <%= f.text_field :time_duration, placeholder: "Time", class: "form-control" %>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <div class="field">
+              Descreption: <%= f.text_area :description, placeholder: "Description", class: "form-control" %>
+            </div>
+          </div>
+        </div>
+      </div>
+       <div class="actions text-center">
+        <%= f.submit class: "btn submit-btn submit-btncarrer submit-btnnew"%>
+      </div>
+    <% end %>
+  </div>
+</section>
+<!-- 6/10/20 -->
+<style type="text/css">
+   h1{
+    color: #000000!important;
+    font-weight: 600;
+    font-size: 40px;
+    padding: 10% 0 4% 0;
+  }
+  .blog-form .form-group input{
+    margin: 15px 0px 0px;
+  }
+  .common-btndiv .submit-btn input{
+    border-bottom: 0;
+    margin: 0;
+    padding: 0;
+    width:100%;
+    color: #fff;
+    font-weight: 500;
+  }
+  .common-btndiv .submit-btn{
+    width: 15%;
+    padding: 14px 0;
+    margin: 12px auto 0;
+  }
+  .blog-form textarea{
+    margin-top: 15px;
+  }
+   .blog-form .form-group input:focus{
+    border-color: #c1417d !important;
+  }
+  .pad{
+    padding-top: 135px; 
+  }
+</style>
+

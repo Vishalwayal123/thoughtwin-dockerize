@@ -1,0 +1,84 @@
+<section class="meta-form common-btndiv pb-5">
+  <div class="">
+    <%= form_with(model: meta_content, local: true) do |form| %>
+      <% if meta_content.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(meta_content.errors.count, "error") %> prohibited this meta_content from being saved:</h2>
+          <ul>
+          <% meta_content.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+      <div class="row row_width">
+        <div class="col-md-6">
+          <div class="form-group">
+            <div class="field">
+              <%= form.text_field :title , placeholder: "Title", class: "form-control"%>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <div class="field">
+              <%= form.text_field :website , placeholder: "Website", class: "form-control"%>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="form-group">
+            <div class="field">
+              <%= form.text_field :keyword , placeholder: "Keyword", class: "form-control"%>
+            </div>
+          </div>
+        </div>
+        <div  class="col-md-6">
+         <div class="form-group">
+             <%= form.select :page, 
+             options_for_select([['home','home'],['about','about'],['portfolio','portfolio'],['ourteam','ourteam'],['blog','blog'],['careers','careers'],['contact','contact']]),
+             {}, { :class => 'form-control' } %>
+         </div>
+        </div>
+         <div class="col-md-6">
+          <div class="form-group">
+            <div class="field">
+              <%= form.text_area :description , placeholder: "Description", class: "form-control"%>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="actions text-center">
+        <%= form.submit class: "btn submit-btn new_contentmeta1"%>
+      </div>
+    <% end %>
+  </div>
+</section>
+<style type="text/css">
+   h1{
+    color: #000000!important;
+    font-weight: 600;
+    font-size: 40px;
+    padding: 8% 0 4% 0;
+  }
+   .common-btndiv .submit-btn input{
+    border-bottom: 0;
+    margin: 0;
+    padding: 0;
+    width:100%;
+    color: #fff;
+    font-weight: 500;
+  }
+  .common-btndiv .submit-btn{
+    width: 17%;
+    padding: 14px 0;
+    margin: 12px auto 0;
+  }
+   .meta-form .form-group input{
+    margin: 15px 0px 0px;
+  }
+  .meta-form textarea,.meta-form select {
+    margin-top: 15px;
+  }
+</style>

@@ -1,0 +1,115 @@
+<!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="CSS/Style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <div class="sigblog_ban">
+        <h1>ThoughtWin Blog</h1>
+        <p>On product management, engineering, design, culture and many more..</p>
+    </div>
+    <div class="container">
+
+                <div class="ban_img">
+                     <div class="sin_blog">
+                       <h1><%= @blog.title.truncate(100).html_safe %></h1>
+                    <div class="names_blog">
+                        <ul>
+                            <li><% img =  @blog.user.try(:profile_image).present? ? @blog.user.try(:profile_image) : "/assets/img/pro_img.png" %>
+                                <%= image_tag "#{img}" %></li>
+                            <li><%= @blog.user.try(:full_name)%></li>
+                            <li><%= @blog.created_at.strftime("%b %d")%></li>
+                        </ul>
+    
+    
+                        <ul class="soc_icon">
+                            <p class="copied"></p>
+                            <li><a href="#"  class="clipboard"><i class="fa fa-files-o" aria-hidden="true"></i></a>
+                            </li>
+                                
+
+                        </ul>
+                        <!-- <p class="copied"></p> -->
+                    </div>
+    
+                    <div class="cen_img">
+                       <img src="<%= @blog.blogger_image %>" alt=""> 
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="main_di">
+            <div class="left-sidebar aos-init aos-animate" data-aos="fade-up" data-aos-duration="3000">
+                <div class="content" >
+                    <% img =  @blog.user.try(:profile_image).present? ? @blog.user.try(:profile_image) : "/assets/img/pro_img.png" %>
+                    <%= image_tag "#{img}" %>
+                    <h2><%= @blog.user.try(:full_name)%></h2>
+                    <p><%= @blog.about_blogger %></p>
+                </div>
+            </div>
+            
+            <div class="con_sec">
+               
+                <div class="para_sec">
+                    <div id="editor" class="video-wrapper">
+                        <p><%= @blog.description.html_safe %></p>
+                    </div>
+                    <h6>Created:<%= @blog.created_at.strftime("%d/%m/%y") %></h6>
+                    <div class="tag">
+                    <p>
+                        <small>Tags: <%  @blog.tags.each do |veer| %> <button class="tagbtn"><%= raw veer.name %></button> <%end%>
+                        </small></p>
+                </div>
+
+                </div>
+            </div>
+        </div>
+  </div>
+</section>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+  </script>
+
+
+<script>
+var $temp = $("<input>");
+var $url = $(location).attr('href');
+
+$('.clipboard').on('click', function() {
+  $("body").append($temp);
+  $temp.val($url).select();
+  document.execCommand("copy");
+  $temp.remove();
+  $(".copied").text("URL copied!");
+})
+</script>
+<link href="https://cdn.quilljs.com/1.1.6/quill.snow.css" rel="stylesheet">
+<script src="https://cdn.quilljs.com/1.1.6/quill.js"></script>
+<script>
+  var quill = new Quill('#editor');
+  $(document).ready(function () {
+    $('[data-toggle="tooltip"]').tooltip();
+  });
+</script>
+<style type="text/css">
+    .video-wrapper {
+  position: relative;
+  /*height: 0;
+  padding-bottom: 56.25%;*/
+}
+.video-wrapper iframe {
+       /*position: absolute;*/
+       width: 100%;
+      /* height: 100%;*/
+       /*top: 0;
+       left: 0;*/
+        width: 100%;
+        height: 430px;
+}
+</style>
+

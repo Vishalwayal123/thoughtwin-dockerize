@@ -1,0 +1,58 @@
+<section class="user-signin guideuser-signin">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="font-weight-normal">Log in</h2>
+      </div>
+      <div class="col-md-12">
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="form-group">
+                  <div class="field">
+                  <%= f.label :username %><br />
+                  <%= f.text_field :username,placeholder: "login", autofocus: true, autocomplete: "login" , class: "form-control widthinput"%>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="field">
+                    <%= f.label :password %><br />
+                    <%= f.password_field :password, placeholder: "Password", autocomplete: "current-password" , class: "form-control widthinput"%>
+                  </div>
+                </div>
+                <div class="actions">
+                  <%= f.submit "Log in" , class: "btn submit-btn loginadmin_btn"%>
+                </div>
+              <% end %>
+            </div>
+          </div>
+          <%= render "devise/shared/links" %>
+      </div>
+    </div>
+  </div>
+</section>
+<style type="text/css">
+  .user-signin .form-group label{
+    position: relative;
+    top: 0;
+  }
+  .loginadmin_btn{
+   text-indent: -17px;
+  }
+  .user-signin input{
+    margin: 16px 0;
+  }
+    h2{
+    color: #000000!important;
+    font-weight: 600;
+    font-size: 40px;
+    padding: 10% 0 4% 0;
+    text-align: center;
+  }
+  .user-signin  .submit-btn{
+    text-align: center;
+    width: 25%;
+    margin: 32px auto ;
+    padding: 14px 14px;
+  }
+</style>

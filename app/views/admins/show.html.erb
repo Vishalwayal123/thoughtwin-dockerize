@@ -1,0 +1,153 @@
+<style type="text/css">
+  .blog-nav{
+    margin: 1% 0%;
+  }
+  .blog-nav ul{
+    padding: 10px 0px;
+  }
+  .blog-nav ul li a{
+    color: #000!important;
+  }
+  .blog-nav ul li a:hover{
+      color: red!important;
+      background-color: transparent!important;
+  }
+  .blog-nav .nav-item .nav-link{
+    color: #000!important;
+  }
+  .blog-nav ul li{
+    padding:10px 0px 10px 0px;
+    margin-right: 35px;
+    border-bottom: 2px solid transparent;
+  }
+  .blog-nav .nav-item:after{
+    background: transparent;
+  }
+  .nav-height {
+    height: calc(100vh - 360px);
+  }
+  .nav-height li:hover{
+    border-bottom: 2px solid red;
+  }
+  .user-uploadimg img{
+    width: 100%;
+    object-fit: cover;
+  }
+  .user-uploadimg{
+    border: 4px solid #e5e5e5;
+    padding: 4px;
+    border-radius: 5px;
+  }
+  .Hel_cen h1 {
+    text-decoration: underline;
+    padding: 0 0 2rem 0;
+    color: #f91e00;
+    font-weight: 500;
+    text-align: left;
+}
+div#editor a {
+    word-break: break-all;
+}
+div#editor ol li img{
+  width: 100%;
+}
+</style>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12 p-0">
+      <h1></h1>
+      <div class="position-absoluteimg">
+        <img alt="Thoughtwin" class="img-responsive first_logo" src="/assets/img/header.png">
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           <!--  <i class="fa fa-bars"></i> -->
+           <img alt="Thoughtwin" class="" src="/assets/img/menu.png">
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">
+              <%= link_to '<button type="EDIT" class="btn sidebar-button">user update details</button>'.html_safe,  edit_user_registration_path %>
+            </a>
+            <a class="dropdown-item" href="#">
+              <%= link_to "Logout",  destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 p-0">
+      <div class="row">
+        <div class="col-lg-2 col-md-3" style="border: 2px solid #c3c3c3;    background-color: #efefef;">
+          <div class="sidenav-buttons">
+            <ul>
+              <li>
+                <%= link_to '<button type="PERSONAL DETAIL" class="btn sidebar-button">dashboard</button>'.html_safe, dashboard_path %>
+              </li>
+              <li><%= link_to '<button type="guideline" class="btn sidebar-button"> Help center</button>'.html_safe,  guideline_path %></li>
+            </ul>
+        </div>
+      </div>
+      <div class="col-lg-10 col-md-9 no-pad">
+        <div class="right-contantbox">
+          <!-- form start -->
+          <form>
+            <div class="container">
+            <!-- row start -->
+            
+                <div class="Hel_cen">
+              <h1>Help Center</h1>
+<ul>
+  <% @guidelines.each do |t| %>
+    
+    <div id="editor">
+      <%=  t.description.html_safe %>
+    </div>
+        
+  <% end %>
+</ul>
+     </div>           
+        </form>
+</div>
+</div>
+ <footer class="ftr_des">
+  <div class="container">
+       <div class="row ">
+         <div class="col-lg-5"><img alt="Thoughtwin" class="img-responsive first_logo" src="/assets/img/header.png"></div>
+        <div class="col-lg-4">
+          <h2>Contact</h2>
+            <p>India: +91 9977069348</p>
+         </div>
+         <div class="col-lg-3">
+          <h2>Follow Us</h2>
+         <div class="social-box">
+          <ul class=" social-list">
+            <li>
+              <a href="https://www.facebook.com/thoughtwin/" target="_blank"> 
+                <i class="fa fa-facebook face_margin" aria-hidden="true" title="Facebook"></i> 
+              </a>
+            </li>
+            <li>
+               <a href="https://www.twitter.com/thoughtwin/" target="_blank"> 
+                <i class="fa fa-twitter face_margin" aria-hidden="true" title="Twitter"></i> 
+               </a>
+            </li>
+            <li>
+              <a href="https://in.linkedin.com/company/thoughtwin" target="_blank">
+                <i class="fa fa-linkedin face_margin" aria-hidden="true" title="LinkedIn"></i> 
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/thoughtwin_solutions/" target="_blank"> 
+                <i class="fa fa-instagram face_margin" aria-hidden="true" title="Instagram"></i> 
+              </a>
+            </li>
+          </ul>
+        </div></div>
+       </div>
+     </div>
+     </footer> 
+        </div>
+    </div>
+  </div>
+</div>

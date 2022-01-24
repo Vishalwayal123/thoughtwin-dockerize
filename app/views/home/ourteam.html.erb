@@ -1,0 +1,69 @@
+<%= render "meta_body"%>
+<!--  -->
+<meta name="description" property="og:description" itemprop="description" content="We design and develop awesome apps for Web and Mobile ">
+<link rel="canonical" href="https://thoughtwin.com/ourteam/" />
+<app-header></app-header>
+  <section class="container-fluid banner1">
+    <div class=" banner_img"></div>
+        <div class="banner-heading">
+            <h1></h1>
+            <p>We are a community of friendly, open-minded,<br> collaborative and professionally growing people.</p>
+            <a class="site_btn btn_join" href='/contact'> Join the team </a>
+        </div>  
+  </section>
+<section class="footer-div">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xl-6 col-lg-6 col-md-6 col-6 social11">
+            <a href="/carrers" class="social-icon">
+                <img src="assets/img/icon11.jpg" alt="Careers">
+                <h2>Careers</h2>
+                <div class="more-btn">
+                </div>  
+            </a>
+          </div>
+          <div class="col-xl-6 col-lg-6 col-md-6 col-6 social11 mob_pad_zero1">
+            <a href="/contact" class="social-icon">
+                <img src="assets/img/icon11.jpg" alt="ContactUs">
+                <h2>Contact Us</h2>
+                <div class="more-btn">
+                </div>  
+            </a>
+          </div>  
+        </div>  
+      </div>  
+  </section>
+<style type="text/css">
+.btn_join{
+    z-index: inherit !important;
+    color: #fff!important;
+}
+@media(max-width:768px){
+.container{
+        max-width: 730px;
+    }
+}
+@media(max-width:375px){
+    .mob_pad_zero{
+        padding-top: 0px;
+    }
+}
+@media only screen and (max-width: 767px) {
+  .footer-div h2{
+    font-size:30px;
+  }
+}
+@media(max-width:320px){
+    .footer-div h2{
+      font-size:24px;
+    }
+}
+@media(max-width:280px){
+  .banner-heading p{
+    margin: -25px 0px 10px !important;
+  }
+  .social11{
+    padding: 23px 0px;
+  }
+}
+</style>

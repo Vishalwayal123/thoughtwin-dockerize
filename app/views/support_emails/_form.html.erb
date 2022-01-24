@@ -1,0 +1,49 @@
+<section class="email-form pb-5 common-btndiv">
+  <div class="container">
+    <%= form_with(model: support_email, local: true) do |form| %>
+    <% if support_email.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(support_email.errors.count, "error") %> prohibited this support_email from being saved:</h2>
+        <ul>
+        <% support_email.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <div class="field">
+            <%= form.text_field :email , placeholder: "Email", class: "form-control"%>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="actions btn submit-btn">
+      <%= form.submit %>
+    </div>
+  <% end %>
+  </div>
+</section>
+<style type="text/css">
+   h1{
+    color: #000000!important;
+    font-weight: 600;
+    font-size: 40px;
+    padding: 8% 0 4% 0;
+  }
+   .common-btndiv .submit-btn input{
+    border-bottom: 0;
+    margin: 0;
+    padding: 0;
+    width:100%;
+    color: #fff;
+  }
+  .common-btndiv .submit-btn{
+    width: 20%;
+    padding: 14px 0;
+    color: #fff;
+    font-weight: 500;
+  }
+</style>
