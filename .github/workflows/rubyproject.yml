@@ -36,6 +36,7 @@ jobs:
       # Add or replace test runners here
       - name: Run tests
         run: bin/rake db:migrate
+        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
 
   lint:
     runs-on: ubuntu-latest
