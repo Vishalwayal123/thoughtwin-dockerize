@@ -38,11 +38,11 @@ class SupportEmailsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to support_email_url(@support_email)
   end
 
-  test "should destroy support_email" do
-    assert_difference('SupportEmail.count', -1) do
-      delete support_email_url(@support_email)
-    end
+  #test "should destroy support_email" do
+    #assert_difference('SupportEmail.count', -1) do
+      #delete support_email_url(@support_email)
+    #end
 
-    assert_redirected_to support_emails_url
-  end
+    #assert_redirected_to support_emails_url
+  #end
 end
