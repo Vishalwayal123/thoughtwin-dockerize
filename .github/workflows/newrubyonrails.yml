@@ -40,13 +40,7 @@ jobs:
         run: bin/rake 
 
 
-       name: Build and Push docker  
-        uses: mr-smithers-excellent/docker-build-push@v5
-        with:
-          image: add your docker-hub-repo/image-name
-          registry: docker.io
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
+      
         
               
 
