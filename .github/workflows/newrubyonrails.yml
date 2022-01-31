@@ -1,0 +1,76 @@
+name: "Ruby on Rails CI"
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:11-alpine
+        ports:
+          - "5432:5432"
+        env:
+          POSTGRES_DB: rails_test
+          POSTGRES_USER: rails
+          POSTGRES_PASSWORD: password
+    env:
+      RAILS_ENV: test
+      DATABASE_URL: "postgres://rails:password@localhost:5432/rails_test"
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      # Add or replace dependency steps here
+      - name: Install Ruby and gems
+        uses: ruby/setup-ruby@8f312efe1262fb463d906e9bf040319394c18d3e # v1.92
+        #uses: actions/setup-ruby@v1
+        with:
+          ruby-version: '2.5.0'
+      
+          bundler-cache: true
+      # Add or replace database setup steps here
+      - name: Set up database schema
+        run: bin/rails db:schema:load
+        
+      #- name: Set up database schema
+      #  run: bin/rails db:create
+      #- name: Set up database schema
+      #  run: bin/rails db:migrate
+        #run: bin/rails db:schema:load
+      # Add or replace test runners here
+      - name: Run tests
+        run: bin/rake 
+      
+      
+      
+      - name: "Configure AWS Credentials" Action For GitHub Actions
+  # You may pin to the exact commit or the version.
+  # uses: aws-actions/configure-aws-credentials@05b148adc31e091bafbaf404f745055d4d3bc9d2
+       uses: aws-actions/configure-aws-credentials@v1
+       with:
+    # AWS Access Key ID. This input is required if running in the GitHub hosted environment. It is optional if running in a self-hosted environment that already has AWS credentials, for example on an EC2 instance.
+    aws-access-key-id: # optional
+    # AWS Secret Access Key. This input is required if running in the GitHub hosted environment. It is optional if running in a self-hosted environment that already has AWS credentials, for example on an EC2 instance.
+    aws-secret-access-key: # optional
+    # AWS Session Token
+    aws-session-token: # optional
+    # AWS Region, e.g. us-east-2
+    aws-region: 
+    # Whether to set the AWS account ID for these credentials as a secret value, so that it is masked in logs. Valid values are 'true' and 'false'. Defaults to true
+    mask-aws-account-id: # optional
+    # Use the provided credentials to assume an IAM role and configure the Actions environment with the assumed role credentials rather than with the provided credentials
+    role-to-assume: # optional
+    # Use the web identity token file from the provided file system path in order to assume an IAM role using a web identity. E.g., from within an Amazon EKS worker node
+    
+    role-duration-seconds: # optional
+    # Role session name (default: GitHubActions)
+    role-session-name: # optional
+    # The external ID of the role to assume
+    role-external-id: # optional
+    # Skip session tagging during role assumption
+    role-skip-session-tagging: # optional
+       
+
+  
