@@ -14,8 +14,8 @@ jobs:
           - "5432:5432"
         env:
           
-          name: production_environment
-          url: https://github.com/Vishalwayal123/thoughtwin-dockerize.git
+          #name: staging_environment
+          #url: https://github.com/Vishalwayal123/thoughtwin-dockerize.git
           POSTGRES_DB: rails_test
           POSTGRES_USER: rails
           POSTGRES_PASSWORD: password
